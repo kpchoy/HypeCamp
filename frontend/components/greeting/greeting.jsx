@@ -1,23 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Greeting = ({ currentUser, logout }) => {
+
+const Greeting = ({ currentUser, logout, openModal }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
-      <Link to="/login">Login</Link>
-
-      <Link to="/signup">Sign up!</Link>
+      <button onClick={() => openModal('signup')}>Sign up</button>
+      &nbsp;or&nbsp;
+      <button onClick={() => openModal('login')}>Log in</button>
     </nav>
   );
   const personalGreeting = () => (
-    <hgroup className="header-group">
-      <h2 className="header-name">Welcome to HypeCamp, 
-      {currentUser.first_name} {currentUser.last_name}!</h2>
+    <header className="header-group">
+      <h1 className="header-name">Welcome to HypeCamp, 
+      {currentUser.first_name} {currentUser.last_name}!</h1>
+
       <button className="header-button" onClick={logout}>Log Out</button>
-    </hgroup>
+    </header>
   );
 
-  return currentUser ? personalGreeting() : sessionLinks();
+  return currentUser ? personalGreeting(currentUser, logout) : sessionLinks();
 };
 
 
