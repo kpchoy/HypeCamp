@@ -14,6 +14,9 @@
  *= require_self
  */
 
- @import "modal.css";
+@import "modal.css";
+@import "./greeting/greeting.css";
+@import "./session/sessionform.css";
+
 
 

@@ -27,13 +27,15 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
+      <div>
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
 
@@ -41,22 +43,27 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'Join Hypecamp' ) {
       return(
         <div>
-        <h1>Join Hypecamp</h1>
-        <p>Discover the best camping near me</p>
+        <h1 className="sf-join-title">Join Hypecamp</h1>
+        <p className="sf-join-small">Discover the best camping near me</p>
 
-        <input type="text"
-        placeholder="First name"
-        className="signup-input" 
-        value={this.state.first_name}
-        onChange={this.update('first_name')}
-        />
+        <section className="sf-fn-ln">
+          
+            <input type="text"
+            placeholder="First name"
+            className="sf-fn" 
+            value={this.state.first_name}
+            onChange={this.update('first_name')}
+            />
 
-        <input type="text"
-        placeholder="Last name"
-        className="signup-input" 
-        value={this.state.last_name}
-        onChange={this.update('last_name')}
-        /> 
+          
+            <input type="text"
+            placeholder="Last name"
+            className="sf-ln" 
+            value={this.state.last_name}
+            onChange={this.update('last_name')}
+            /> 
+
+        </section>
       </div>
 
       );
@@ -67,9 +74,9 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'Join Hypecamp') {
       return(
         <div>
-          <p>By signing up, I agree to Hypecamp's terms and privacy policy.</p>
+          <p className="sf-join-bot">By signing up, I agree to Hypecamp's terms and privacy policy.</p>
 
-          <p>Already a Hipcamper? {this.props.otherForm}</p>
+          <p className="sf-join-bot">Already a Hipcamper? {this.props.otherForm}</p>
         </div>
       )
     }
@@ -96,23 +103,30 @@ class SessionForm extends React.Component {
     }
   }
 
+  renderJoin() {
+    if (this.props.formType === 'Join Hypecamp') {
+      return(
+        <input className="sf-join" type="submit" value={this.props.formType} />
+      );
+    }
+  }
  
 
   render() {
     return (
       <div className="login-form-container">
         
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+        <form onSubmit={this.handleSubmit} className="sf-main">
           
           <br/>
           <div onClick={this.props.closeModal} className="close-x"></div>
-          {this.renderFnameLname()}
           {this.renderWelcomeBack()}
-          {this.renderErrors()}
+          {this.renderFnameLname()}
           <div className="login-form">
-            <br/>
+            
+            
             <label>
-              <input type="text"
+              <input type="email"
                 placeholder="Email address"
                 value={this.state.email}
                 onChange={this.update('email')}
@@ -129,14 +143,14 @@ class SessionForm extends React.Component {
                 />
             </label>
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
-
+            {this.renderJoin()}
             {this.renderNoAcct()}
             {this.renderterms()}      
 
           </div>
         </form>
         
+        {this.renderErrors()}
       </div>
     );
   }

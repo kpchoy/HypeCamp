@@ -8,7 +8,6 @@ const App = () => (
   <div>
     <Modal /> 
     <header>
-      <h1>App component jsx</h1>
       <GreetingContainer />
     </header>
    

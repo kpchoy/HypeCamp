@@ -1,0 +1,62 @@
+button:focus {outline:0;}
+
+a {color: inherit}
+
+.sf-join-title {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sf-join-small {
+  color: #a1a1a1;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.sf-join-bot {
+  font-size: 14px;
+  color: black;
+}
+
+
+.sf-fn-ln {
+  align-content: center;
+}
+
+.sf-fn {
+  font-size: 16px;
+  margin-right:5px;
+  width: 80px;
+  padding: 12px;
+  border: 1px solid;
+}
+
+.sf-ln {
+  font-size: 16px;
+  width: 80px;
+  padding: 12px;
+  border: 1px solid;
+}
+
+.sf-main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  width: 280px;
+}
+
+.login-input {
+  font-size: 16px;
+  margin-bottom: 5px;
+  width: 184px;
+  padding: 12px;
+  border: 1px solid;
+  margin-top: 10px;
+}
+
+.login-form {
+  top: 30%;
+}
