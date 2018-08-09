@@ -8,7 +8,7 @@ import SessionForm from './session_form';
 const mstp = ({ errors }) => {
   return {
     errors: errors.session,
-    formType: 'signin',
+    formType: 'signup',
   };
 };
 

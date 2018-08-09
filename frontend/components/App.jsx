@@ -10,6 +10,7 @@ const App = () => (
       <h1>App component jsx</h1>
       <GreetingContainer />
     </header>
+   
   </div>
 );
 

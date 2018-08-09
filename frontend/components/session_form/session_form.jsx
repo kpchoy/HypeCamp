@@ -35,9 +35,13 @@ class SessionForm extends React.Component {
     );
   }
 
+ 
+
   render() {
     return (
       <div className="login-form-container">
+        <div onClick={this.props.closeModal} className="close-x">x</div>
+        
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <h2>
             Join HypeCamp
@@ -47,7 +51,6 @@ class SessionForm extends React.Component {
           </p>
           <br/>
           Already a Hypecamper? {this.props.otherForm}
-          <div onClick={this.props.closeModal} className="close-x"></div>
           {this.renderErrors()}
           <div className="login-form">
             <br/>
@@ -56,7 +59,7 @@ class SessionForm extends React.Component {
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="login-input"
-              />
+                />
             </label>
             <br/>
             <label>Password:
@@ -64,12 +67,13 @@ class SessionForm extends React.Component {
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
-              />
+                />
             </label>
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
+        
       </div>
     );
   }
