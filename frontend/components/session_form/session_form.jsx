@@ -75,6 +75,27 @@ class SessionForm extends React.Component {
     }
   }
 
+  renderWelcomeBack() {
+    if (this.props.formType === 'login') {
+      return(
+        <div>
+          <h1>Welcome back!</h1>
+          <p>It's about time for another camping trip</p>
+        </div>
+      );
+    }
+  }
+
+  renderNoAcct() {
+    if (this.props.formType === 'login') {
+      return(
+        <div>
+          <p>Don't have a Hypecammp account? {this.props.otherForm}</p>
+        </div>
+      ); 
+    }
+  }
+
  
 
   render() {
@@ -86,6 +107,7 @@ class SessionForm extends React.Component {
           <br/>
           <div onClick={this.props.closeModal} className="close-x"></div>
           {this.renderFnameLname()}
+          {this.renderWelcomeBack()}
           {this.renderErrors()}
           <div className="login-form">
             <br/>
@@ -109,7 +131,9 @@ class SessionForm extends React.Component {
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
 
-            {this.renderterms()}            
+            {this.renderNoAcct()}
+            {this.renderterms()}      
+
           </div>
         </form>
         
