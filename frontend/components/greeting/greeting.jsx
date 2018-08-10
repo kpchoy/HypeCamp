@@ -47,10 +47,10 @@ const Greeting = ({ currentUser, logout, openModal }) => {
       </section>
 
       <ul className="right-greeting">
+        <li><a className="right-greeting-links" href="">Get $20</a></li>
+        <li><a className="right-greeting-links" href="">Camp</a></li>
         <li><a className="right-greeting-links" href="">Host</a></li>
         <li><a className="right-greeting-links" href="">Scout</a></li>
-        <li><a className="right-greeting-links" href="">Camp</a></li>
-        <li><a className="right-greeting-links" href="">Get $20</a></li>
         <li><a className="right-greeting-links" href="">About</a></li>
         <li><a className="loggedin-start-hosting" href="">Start hosting</a></li>
         <li><a className="right-greeting-links" href="">Messages</a></li>
