@@ -8,7 +8,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         <h1 className="hype-logo">HYPECAMP</h1>
         <div className="main-searchbar">
           <div className="search-icon" >
-            <i class="fa fa-search" aria-hidden="true"></i>
+            <i className="fa fa-search" aria-hidden="true"></i>
           </div>
           <input type="text"
           placeholder="Search..."

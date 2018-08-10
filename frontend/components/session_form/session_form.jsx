@@ -27,14 +27,9 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <div>
-        <ul>
-          {this.props.errors.map((error, i) => (
-            <li key={`error-${i}`}>
-              {error}
-            </li>
-          ))}
-        </ul>
+      <div className="errors-render">
+
+        {this.props.errors[0]}
       </div>
     );
   }
@@ -73,10 +68,10 @@ class SessionForm extends React.Component {
   renderterms() {
     if (this.props.formType === 'Join Hypecamp') {
       return(
-        <div>
-          <p className="sf-join-bot">By signing up, I agree to Hypecamp's terms and privacy policy.</p>
+        <div className="sf-join-bot-master">
+          <p className="">By signing up, I agree to Hypecamp's terms and privacy policy.</p>
 
-          <p className="sf-join-bot">Already a Hipcamper? {this.props.otherForm}</p>
+          <p className="">Already a Hipcamper? {this.props.otherForm}</p>
         </div>
       )
     }
@@ -106,7 +101,7 @@ class SessionForm extends React.Component {
   renderJoin() {
     if (this.props.formType === 'Join Hypecamp') {
       return(
-        <input className="sf-join" type="submit" value={this.props.formType} />
+        <button className="sf-join" type="submit">Join Hypecamp</button>
       );
     }
   }
@@ -144,13 +139,14 @@ class SessionForm extends React.Component {
             </label>
             <br/>
             {this.renderJoin()}
+            {this.renderterms()}
+
             {this.renderNoAcct()}
-            {this.renderterms()}      
 
           </div>
+        {this.renderErrors()}
         </form>
         
-        {this.renderErrors()}
       </div>
     );
   }

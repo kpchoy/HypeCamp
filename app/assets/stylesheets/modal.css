@@ -13,7 +13,8 @@
   position: absolute;
   background: white;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
