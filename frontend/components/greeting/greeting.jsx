@@ -55,12 +55,26 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         <li><a className="loggedin-start-hosting" href="">Start hosting</a></li>
         <li><a className="right-greeting-links" href="">Messages</a></li>
         <li>
-          <a>
-            <i class="fa fa-tree" aria-hidden="true"></i>
+          <a className="badge">
+            <i className="fa fa-tree" aria-hidden="true"></i>
           </a>
-          
+          <ul className="dropdown-items">
+            <li><a href="#">View Profile</a></li>
+            <li><a href="#">Your Trips</a></li>
+            <li><a href="#">Help & FAQ</a></li>
+            <li><button className="logout-button" onClick={logout}>Log out</button></li>
+          </ul>
         </li>
-        <li><button className="logout-button" onClick={logout}>Log out</button></li>
+        <li>
+          <div className="dropdown">
+            <button className="dropbtn"><i className="fa fa-tree" aria-hidden="true"></i></button>
+            <div className="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </li>
       </ul>
     </div>
   );
