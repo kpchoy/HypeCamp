@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Greeting = ({ currentUser, logout, openModal }) => {
   const sessionLinks = () => (
     <div className="greeting-header">
@@ -33,12 +32,37 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     </div>
   );
   const personalGreeting = () => (
-    <header className="header-group">
-      <h1 className="header-name">Welcome to HypeCamp, 
-      {currentUser.first_name} {currentUser.last_name}!</h1>
+    <div className="greeting-header">
+      <section className="left-greeting">
+        <h1 className="hype-logo">HYPECAMP</h1>
+        <div className="main-searchbar">
+          <div className="search-icon" >
+            <i className="fa fa-search" aria-hidden="true"></i>
+          </div>
+          <input type="text"
+          placeholder="Search..."
+          className="search-bar"
+          />
+        </div>
+      </section>
 
-      <button className="header-button" onClick={logout}>Log Out</button>
-    </header>
+      <ul className="right-greeting">
+        <li><a className="right-greeting-links" href="">Host</a></li>
+        <li><a className="right-greeting-links" href="">Scout</a></li>
+        <li><a className="right-greeting-links" href="">Camp</a></li>
+        <li><a className="right-greeting-links" href="">Get $20</a></li>
+        <li><a className="right-greeting-links" href="">About</a></li>
+        <li><a className="loggedin-start-hosting" href="">Start hosting</a></li>
+        <li><a className="right-greeting-links" href="">Messages</a></li>
+        <li>
+          <a>
+            <i class="fa fa-tree" aria-hidden="true"></i>
+          </a>
+          
+        </li>
+        <li><button className="logout-button" onClick={logout}>Log out</button></li>
+      </ul>
+    </div>
   );
 
   return currentUser ? personalGreeting(currentUser, logout) : sessionLinks();

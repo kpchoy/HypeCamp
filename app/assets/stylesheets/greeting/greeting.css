@@ -43,6 +43,7 @@ textarea:focus, input:focus{
 .right-greeting {
   display: flex;
   color: #333333;
+  list-style: none;
 
   align-items: center;
   padding-right: 15px;
@@ -80,9 +81,61 @@ a {color: inherit}
   margin-right: 10px;
   font-size: 14px;
   text-decoration: none;
+  list-style: none;
+  position: relative;
+}
+
+.right-greeting-links:after {
+  position: absolute;
+  height: 1px;
+  margin: 0 auto;
+  content: '';
+  left: 0;
+  right: 0;
+  width: 90%;
+  color: #000;
+  background-color: #ebebeb;
+  left: 0;
+  bottom: -5px; 
 }
 
 button.host-button:hover {
   background-color: #40d9ac;
   color: white;
+}
+
+.loggedin-start-hosting {
+  margin-right: 10px; 
+  text-decoration: none;
+  position: relative;
+  color: #40d9ac;
+}
+
+.loggedin-start-hosting:after {
+  position: absolute;
+  height: 1px;
+  margin: 0 auto;
+  content: '';
+  left: 0;
+  right: 0;
+  width: 90%;
+  color: #000;
+  background-color: #ebebeb;
+  left: 0;
+  bottom: -5px; 
+}
+
+.logout-button {
+  text-decoration: none; 
+  font-size: 14px;
+  height: 30px;
+  width: 70px;
+  background: transparent;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  color: #333333;
+}
+
+.logout-button:hover {
+  color: #40d9ac;
+  background-color: #ebebeb;
 }
