@@ -78,31 +78,23 @@ class SessionForm extends React.Component {
   }
 
   renderWelcomeBack() {
-    if (this.props.formType === 'login') {
+    if (this.props.formType === 'Log In') {
       return(
         <div>
-          <h1>Welcome back!</h1>
-          <p>It's about time for another camping trip</p>
+          <h1 className="sf-join-title">Welcome back!</h1>
+          <p className="sf-join-small">It's about time for another camping trip</p>
         </div>
       );
     }
   }
 
   renderNoAcct() {
-    if (this.props.formType === 'login') {
+    if (this.props.formType === 'Log In') {
       return(
-        <div>
+        <div className="sf-join-bot-master">
           <p>Don't have a Hypecammp account? {this.props.otherForm}</p>
         </div>
       ); 
-    }
-  }
-
-  renderJoin() {
-    if (this.props.formType === 'Join Hypecamp') {
-      return(
-        <button className="sf-join" type="submit">Join Hypecamp</button>
-      );
     }
   }
  
@@ -138,7 +130,8 @@ class SessionForm extends React.Component {
                 />
             </label>
             <br/>
-            {this.renderJoin()}
+            <button className="sf-join-login" type="submit">{this.props.formType}</button>
+
             {this.renderterms()}
 
             {this.renderNoAcct()}

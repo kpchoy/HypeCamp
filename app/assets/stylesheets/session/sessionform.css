@@ -16,7 +16,7 @@ a {color: inherit}
 }
 
 
-.sf-join {
+.sf-join-login {
   font-size: 16px;
   height: 60px;
   width: 216px;
@@ -50,7 +50,7 @@ a {color: inherit}
   flex-direction: column;
   text-align: center;
   font-family: "Calibre", Helvetica, Arial, sans-serif;
-  width: 280px;
+  width: 320px;
 }
 
 .login-input {

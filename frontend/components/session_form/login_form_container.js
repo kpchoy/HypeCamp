@@ -6,7 +6,7 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mstp = ({errors}) => ({
   errors: errors.session, 
-  formType: 'login'
+  formType: 'Log In'
 });
 
 const mdtp = dispatch => ({
