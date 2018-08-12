@@ -3,6 +3,10 @@ class User < ApplicationRecord
     validates :email, presence: true, uniqueness: true 
     validates :password, length: {minimum: 6, allow_nil: true}
 
+    has_many :owned_campsites,
+      foreign_key: :owner_id,
+      class_name: :Campsite 
+
     attr_reader :password
 
     after_initialize :ensure_session_token
