@@ -45,15 +45,19 @@ c6 = Campsite.create(owner_id: u1.id, title: "FollyFootFrolic",
   description: "Equal parts working farm, renovation in progress, and Youth Hostel, FollyFoot's mission is to create a fun, relaxed environment where diversity and community are celebrated!! More social than escapist, our unique property is an experience you'll not find anywhere else. ",
   daily_rate: 60, state: "California", lat: 36.44, lng: -121.6657)
 
-c7 = Campsite.create(owner_id: u5.id, title: "Yurt Glampin in the Forrest", 
-  description: "We are one hour from San Francisco, and ninety minutes from Monterey. Rural setting but 10 minutes to town, ideal for telecommuting also with reliable cell phone reception. Award winning Los Gatos schools.",
-  daily_rate: 135, state: "California", lat: 38.0815, lng: -122.2620)
+c7 = Campsite.create(owner_id: u5.id, title: "Bumps & Bruzas Riverfront", 
+  description: "Very simple property on the Carbon River about 800ft of river front. Couple of fire rings, nothing fancy yet! We have one campsite with a private fire ring, which is first come first serve. We also have a large community firepit thats open to everyone at all times. None of the spots are numbered, just find a place you like. Just a great place to relax and unplug",
+  daily_rate: 27, state: "Washington", lat: 47.1088, lng: -122.1192)
 
-c8 = Campsite.create(owner_id: u4.id, title: "Whiteside Mountain", 
-  description: "A single camp spot on the top of a mountain surrounded by 160 acres of no one else! 4WD/AWD road to camp spot. Plenty of shade at spot with picnic area that is covered. Drinking water, sink and outdoor cold water shower. Bouldering (climbing), fire pit (seasonal), covered deck, hiking and VIEWS! Plenty of room and separate camp spots- lock the gate and you will have no visitors or on lookers. Single outdoor flush toilet with sink.  We provide a Propane stove - 2 burner.",
-  daily_rate: 85, state: "California", lat: 32.6671, lng: -116.75)
+c8 = Campsite.create(owner_id: u4.id, title: "Running Deer TIPI near Bryce Canyon", 
+  description: "You’ll love staying here because of the spectacular 360˚ views on a private 13-acre property. Conveniently and easily accessible directly off Hwy 89. My place is good for couples and solo adventurers. Enjoy spectacular views of Red Rock Cliffs and the Sevier River from your hilltop private TIPI. ",
+  daily_rate: 70, state: "Utah", lat: 37.6839, lng: -112.4104)
 
-c9 = 
+c9 = Campsite.create(owner_id: u1.id, title: "Winter wonderland near skiing", 
+  description: "During the winter our back field is not accessible. We are in Teton Valley, Idaho, with an elevation of 6,500 ft, and we get heavy snow. Our parking lot is cleared of snow and this has plenty of parking for RVs. We are a 12-mile drive from Grand Targhee, a world-renowned ski resort. ",
+  daily_rate: 25, state: "Idaho", lat: 43.7542, lng: -111.1066)
+
+
 
 
 
