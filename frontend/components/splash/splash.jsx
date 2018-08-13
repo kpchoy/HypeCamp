@@ -1,24 +1,22 @@
 import React from 'react';
 import Link from 'react-router';
+import SplashItem from './splash_item';
 
 class Splash extends React.Component {
-  
-  componentDidMount() {
-    this.props.fetchCampsites();
-  }
 
   render() {
-    console.log(this.props.campsites[0]);
     return (
-      <div>
-        <h1>this is splash</h1>
-        <section>
-          Main picture  
+      <div >
+        
+        <section >
+          <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/main_photo.jpg" className="main-img"/>
         </section>
 
-        {this.props.campsites.map((campsite) => (
-          <p>{campsite.title}</p>
-        ))}
+        <h1>this is splash</h1>
+        <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/white-side-mountain-01.webp" />
+       
+
+       
       </div>
     );
   }

@@ -1,10 +1,10 @@
 class Campsite < ApplicationRecord
-  validates :title, :description, :owner_id, :daily_rate, :state,
-  :picture_url, presence: true 
+  validates :title, :description, :owner_id, :daily_rate, :state, presence: true 
 
   belongs_to :user,
     foreign_key: :owner_id,
     class_name: :User
 
+  has_one_attached :photo
   
 end

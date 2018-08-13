@@ -27,8 +27,7 @@ class Api::CampsitesController < ApplicationController
       :daily_rate,
       :state, 
       :lat,
-      :lng,
-      :picture_url      
+      :lng      
     )
   end
 
