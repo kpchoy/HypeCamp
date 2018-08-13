@@ -56,3 +56,71 @@
   background: white;
 
 }
+
+.search-links-holder {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin-left: -40px;
+}
+
+.li-c-i-o {
+  border: solid 1px #40d9ac;
+  padding: 20px 40px 20px 40px;
+  color: #40d9ac;
+}
+
+.notextdec {
+  text-decoration: none;
+}
+
+.splash-search-button {
+  background: #40d9ac;
+  color: white;
+  padding: 20px 40px 20px 40px; 
+}
+
+.splash-bot {
+  margin-top: 50px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+}
+
+.discover-camp {
+  text-align: center;
+  font-size: 30px;
+}
+
+.camp-row {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -40px;
+}
+
+.camp-row > li {
+  list-style: none;
+  border: solid 1px #ebebeb; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.camp-row > li > a {
+  text-decoration: none;
+}
+
+.camp-row > li > a > p {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.camp-row > li > a > img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+
