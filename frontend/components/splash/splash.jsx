@@ -8,12 +8,33 @@ class Splash extends React.Component {
     return (
       <div >
         
-        <section >
-          <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/main_photo.jpg" className="main-img"/>
+        <section className="uppersplash">
+          <div className="uppersplash-l">
+            <p className="find-txt">
+              Find yourself outside.
+            </p>
+            <p className="splash-small">
+              Book unique camping experiences on 15 campsites!
+            </p>
+
+            <div className="s-main-searchbar">
+              <div className="s-search-icon" >
+                <i class="fas fa-location-arrow"></i>
+              </div>
+              <input type="text"
+              placeholder="Camping near me..."
+              className="s-search-bar"
+              />
+            </div>
+
+          </div>
+          <div className="uppersplash-r">
+            <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/main_photo.jpg" className="main-img"/>
+          </div>
         </section>
 
         <h1>this is splash</h1>
-        <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/white-side-mountain-01.webp" />
+       
        
 
        

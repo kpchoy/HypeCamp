@@ -17,9 +17,8 @@ const Greeting = ({ currentUser, logout, openModal }) => {
       </section>
 
       <section className="right-greeting">
-        <a className="right-greeting-links" href="">Get $20</a>
-        <a className="right-greeting-links" href="">Camp</a>
-        <a className="right-greeting-links" href="">Host</a>
+        <a className="right-greeting-icons" href="http://www.linkedin.com/in/kevin-choy-b5714b133" target="_blank"><i className="fab fa-linkedin"></i></a>
+        <a className="right-greeting-icons" href="https://github.com/kpchoy/HypeCamp" target="_blank"><i className="fab fa-github-square"></i></a>
         <a className="right-greeting-links" href="">Scout</a>
         <a className="right-greeting-links" href="">About</a>
         <nav className="login-signup">
@@ -47,9 +46,12 @@ const Greeting = ({ currentUser, logout, openModal }) => {
       </section>
 
       <ul className="right-greeting">
-        <li><a className="right-greeting-links" href="">Get $20</a></li>
-        <li><a className="right-greeting-links" href="">Camp</a></li>
-        <li><a className="right-greeting-links" href="">Host</a></li>
+        <li>
+          <a className="right-greeting-icons" href="http://www.linkedin.com/in/kevin-choy-b5714b133" target="_blank"><i className="fab fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a className="right-greeting-icons" href="https://github.com/kpchoy/HypeCamp" target="_blank"><i className="fab fa-github-square"></i></a>
+        </li>
         <li><a className="right-greeting-links" href="">Scout</a></li>
         <li><a className="right-greeting-links" href="">About</a></li>
         <li><a className="loggedin-start-hosting" href="">Start hosting</a></li>
