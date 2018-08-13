@@ -65,24 +65,46 @@ class Splash extends React.Component {
             </li>
           </ul>
 
-          
+
           <ul className="camp-row">
             <li>
               <a href="">
-                <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/01-splah-soto.webp" />
-                <p>Tent Camping</p>
+                <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/04-splash-tmg.webp" />
+                <p>Tree House</p>
               </a>
             </li>
             <li>
               <a href="">
-                <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/02-splash-wtto.webp" />
-                <p>Ocean Views</p>
+                <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/05-splash-fgl.webp" />
+                <p>Grazing Land</p>
               </a>
             </li>
             <li>
               <a href="">
-                <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/03-splash-gbm.webp" />
-                <p>Glamping</p>
+                <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/06-splash-fff.webp" />
+                <p>Big Sur</p>
+              </a>
+            </li>
+          </ul>
+
+
+          <ul className="camp-row">
+            <li>
+              <a href="">
+                <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/07-splash-bbr.webp" />
+                <p>Mount Rainier</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/08-splash-rdbc.webp" />
+                <p>Utah</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/09-splash-wwns.webp" />
+                <p>Idaho</p>
               </a>
             </li>
           </ul>
