@@ -57,6 +57,8 @@ c9 = Campsite.create(owner_id: u1.id, title: "Winter wonderland near skiing",
   description: "During the winter our back field is not accessible. We are in Teton Valley, Idaho, with an elevation of 6,500 ft, and we get heavy snow. Our parking lot is cleared of snow and this has plenty of parking for RVs. We are a 12-mile drive from Grand Targhee, a world-renowned ski resort. ",
   daily_rate: 25, state: "Idaho", lat: 43.7542, lng: -111.1066)
 
+CampsitePhoto.delete_all
+p1 = CampsitePhoto.create()
 
 
 

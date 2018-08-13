@@ -5,6 +5,6 @@ class Campsite < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
-  has_one_attached :photo
-  
+  has_many :campsite_photos
+    
 end

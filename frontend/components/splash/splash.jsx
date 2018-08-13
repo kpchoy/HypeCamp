@@ -19,7 +19,7 @@ class Splash extends React.Component {
 
             <div className="s-main-searchbar">
               <div className="s-search-icon" >
-                <i class="fas fa-location-arrow"></i>
+                <i className="fas fa-location-arrow"></i>
               </div>
               <input type="text"
               placeholder="Camping near me..."
