@@ -58,7 +58,16 @@ c9 = Campsite.create(owner_id: u1.id, title: "Winter wonderland near skiing",
   daily_rate: 25, state: "Idaho", lat: 43.7542, lng: -111.1066)
 
 CampsitePhoto.delete_all
-p1 = CampsitePhoto.create()
+c1p1 = CampsitePhoto.create(campsite_id: c1.id, 
+image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/01-soto/01-soto.webp")
+c1p2 = CampsitePhoto.create(campsite_id: c1.id,
+image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/01-soto/02-soto.webp")
+c1p3 = CampsitePhoto.create(campsite_id: c1.id,
+image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/01-soto/03-soto.webp")
+c1p4 = CampsitePhoto.create(campsite_id: c1.id,
+image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/01-soto/04-soto.webp")
+c1p5 = CampsitePhoto.create(campsite_id: c1.id,
+image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/01-soto/05-soto.webp")
 
 
 
