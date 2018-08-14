@@ -24,9 +24,15 @@ class CampsiteShow extends React.Component {
         </ul>
         
         <section className="show-body">
+          
           <div className="show-body-left">
+            <p className="show-body-state">{campsite.state}</p>
             <h1>{campsite.title}</h1>
+            <p className="show-body-description">Description</p>
+            <p>{campsite.description}</p>
           </div>
+
+
           <div className="show-body-right">
             <div className="show-body-price">
               <h1>$ {campsite.daily_rate}</h1>

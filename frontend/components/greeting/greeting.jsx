@@ -4,7 +4,9 @@ const Greeting = ({ currentUser, logout, openModal }) => {
   const sessionLinks = () => (
     <div className="greeting-header">
       <section className="left-greeting">
-        <h1 className="hype-logo">HYPECAMP</h1>
+        <a className="link-hype-logo" href="/">
+          <h1 className="hype-logo">HYPECAMP</h1>
+        </a>
         <div className="main-searchbar">
           <div className="search-icon" >
             <i className="fa fa-search" aria-hidden="true"></i>

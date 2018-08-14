@@ -14,7 +14,7 @@ class Splash extends React.Component {
               Find yourself outside.
             </p>
             <p className="splash-small">
-              Book unique camping experiences on 15 campsites!
+              Book unique camping experiences on 9 campsites!
             </p>
 
             <div className="s-main-searchbar">

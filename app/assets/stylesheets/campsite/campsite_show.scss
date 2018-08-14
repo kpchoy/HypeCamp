@@ -89,7 +89,28 @@
 }
 
 .show-body-left {
-  text-align: center;
+  width: 500px;
+}
+
+.show-body-state {
+  font-size: 18px;
+  border-bottom:  solid 1px #ebebeb; 
+  padding-bottom: 5px;
+  width: 80px;
+}
+
+.show-body-description {
+  font-size: 18px;
+  border-bottom:  solid 1px #ebebeb; 
+  padding-bottom: 5px;
+  width: 100px;
+  font-weight: bold;
+}
+
+.show-body-left > p {
+  font-size: 18px;
+  border-bottom:  solid 1px #ebebeb; 
+  padding-bottom: 5px;
 }
 
 .show-body-left > h1 {

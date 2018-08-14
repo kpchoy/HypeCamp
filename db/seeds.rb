@@ -69,6 +69,93 @@ image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/01-soto/04-soto.webp
 c1p5 = CampsitePhoto.create(campsite_id: c1.id,
 image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/01-soto/05-soto.webp")
 
+c2p1 = CampsitePhoto.create(campsite_id: c2.id),
+image_url: "")
+c2p2 = CampsitePhoto.create(campsite_id: c2.id),
+image_url: "")
+c2p3 = CampsitePhoto.create(campsite_id: c2.id),
+image_url: "")
+c2p4 = CampsitePhoto.create(campsite_id: c2.id),
+image_url: "")
+c2p5 = CampsitePhoto.create(campsite_id: c2.id),
+image_url: "")
+
+c3p1 = CampsitePhoto.create(campsite_id: c3.id),
+image_url: "")
+c3p2 = CampsitePhoto.create(campsite_id: c3.id),
+image_url: "")
+c3p3 = CampsitePhoto.create(campsite_id: c3.id),
+image_url: "")
+c3p4 = CampsitePhoto.create(campsite_id: c3.id),
+image_url: "")
+c3p5 = CampsitePhoto.create(campsite_id: c3.id),
+image_url: "")
+
+c4p1 = CampsitePhoto.create(campsite_id: c4.id),
+image_url: "")
+c4p2 = CampsitePhoto.create(campsite_id: c4.id),
+image_url: "")
+c4p3 = CampsitePhoto.create(campsite_id: c4.id),
+image_url: "")
+c4p4 = CampsitePhoto.create(campsite_id: c4.id),
+image_url: "")
+c4p5 = CampsitePhoto.create(campsite_id: c4.id),
+image_url: "")
+
+c5p1 = CampsitePhoto.create(campsite_id: c5.id),
+image_url: "")
+c5p2 = CampsitePhoto.create(campsite_id: c5.id),
+image_url: "")
+c5p3 = CampsitePhoto.create(campsite_id: c5.id),
+image_url: "")
+c5p4 = CampsitePhoto.create(campsite_id: c5.id),
+image_url: "")
+c5p5 = CampsitePhoto.create(campsite_id: c5.id),
+image_url: "")
+
+c6p1 = CampsitePhoto.create(campsite_id: c6.id),
+image_url: "")
+c6p2 = CampsitePhoto.create(campsite_id: c6.id),
+image_url: "")
+c6p3 = CampsitePhoto.create(campsite_id: c6.id),
+image_url: "")
+c6p4 = CampsitePhoto.create(campsite_id: c6.id),
+image_url: "")
+c6p5 = CampsitePhoto.create(campsite_id: c6.id),
+image_url: "")
+
+c7p1 = CampsitePhoto.create(campsite_id: c7.id),
+image_url: "")
+c7p2 = CampsitePhoto.create(campsite_id: c7.id),
+image_url: "")
+c7p3 = CampsitePhoto.create(campsite_id: c7.id),
+image_url: "")
+c7p4 = CampsitePhoto.create(campsite_id: c7.id),
+image_url: "")
+c7p5 = CampsitePhoto.create(campsite_id: c7.id),
+image_url: "")
+
+c8p1 = CampsitePhoto.create(campsite_id: c8.id),
+image_url: "")
+c8p2 = CampsitePhoto.create(campsite_id: c8.id),
+image_url: "")
+c8p3 = CampsitePhoto.create(campsite_id: c8.id),
+image_url: "")
+c8p4 = CampsitePhoto.create(campsite_id: c8.id),
+image_url: "")
+c8p5 = CampsitePhoto.create(campsite_id: c8.id),
+image_url: "")
+
+c9p1 = CampsitePhoto.create(campsite_id: c9.id),
+image_url: "")
+c9p2 = CampsitePhoto.create(campsite_id: c9.id),
+image_url: "")
+c9p3 = CampsitePhoto.create(campsite_id: c9.id),
+image_url: "")
+c9p4 = CampsitePhoto.create(campsite_id: c9.id),
+image_url: "")
+c9p5 = CampsitePhoto.create(campsite_id: c9.id),
+image_url: "")
 
 
 
