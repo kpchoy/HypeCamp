@@ -19,7 +19,7 @@ class CampsiteShow extends React.Component {
       <div>
         <h1>hello this is campsite show</h1>
         <p>{campsite.title}</p>
-        <img src={campsitePhotos[0].image_url} />
+        
       </div>
     );
 
