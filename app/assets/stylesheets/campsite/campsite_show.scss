@@ -1,7 +1,99 @@
-.camp-slider {
-  background: blue;
-  height: 200px;
+.main-camp-show {
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+
 }
-.camp-slider-pic {
+
+.upper-images {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  height: 400px;
+  justify-content: space-between;
+}
+
+.upper-images > li {
+  list-style: none;
+}
+
+.upper-images > li > img {
+  height: 350px;
+  width: 450px;
+  object-fit: cover;
+}
+
+.show-body {
+  margin-right: auto;
+  margin-left: auto;
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+
+}
+
+
+.show-body-right {
+  width: 300px;
+  height: 300px;
+  border: solid 1px #ebebeb; 
+  align-items: center;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.show-body-price {
+  height: 80px; 
+  padding-left: 10px;
+}
+
+.show-body-price > h1 {
+  margin: 0;
+  padding-bottom: 0;
+  padding-top: 30px;
+}
+
+.show-body-price > p {
+  margin: 0;
+  padding: 0;
+}
+
+.show-body-right > ul {
+  padding-left: 0;
+  display: flex;
   height: 100px;
+  justify-content: space-between;
+}
+
+.show-body-right > ul > li {
+  list-style: none;
+  padding-left: 5px;
+  width: 100px;
+  border: solid 1px #ebebeb; 
+}
+
+.show-body-right > ul > li > h3 {
+  font-size: 16px;
+}
+
+.show-body-right > section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.show-body-right > section > a {
+  background: #40d9ac;
+  color: white;
+  padding: 30px 70px 30px 70px; 
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.show-body-left {
+  text-align: center;
+}
+
+.show-body-left > h1 {
+  font-size: 34px;
+  border-bottom:  solid 1px #ebebeb; 
+  padding-bottom: 20px;
 }
