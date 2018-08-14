@@ -1,5 +1,7 @@
 json.campsite do
-  json.partial! '/api/campsites/campsite', campsite: @campsite
+  json.set! @campsite.id do 
+    json.partial! '/api/campsites/campsite', campsite: @campsite
+  end 
 end
 
 json.campsite_photos do
