@@ -14,7 +14,7 @@ const receiveCampsites = (campsites) => ({
 export const RECEIVE_CAMPSITE = "RECEIVE_CAMPSITE";
 
 export const fetchCampsite = (id) => dispatch => (
-  CampsiteAPIUtil.fetchCampsite(id).then((campsite) => dispatch(receiveCampsites(campsite)))
+  CampsiteAPIUtil.fetchCampsite(id).then((campsite) => dispatch(receiveCampsite(campsite)))
 );
 
 const receiveCampsite = (campsite) => ({

@@ -2,10 +2,10 @@ import {connect} from 'react-redux';
 import CampsiteShow from './campsite_show';
 import {fetchCampsite} from '../../actions/campsite_actions';
 
-const mstp = ({entities}) => {
+const mstp = (state, ownProps) => {  
+  console.log(state.entities.campsites);
   return ({
-    campsite: entities.campsites.campsite,
-    campsite_photos: entities.campsites.campsite_photos
+    campsite: state.entities.campsites[ownProps.match.params.campsiteId]
   });
 };
 

@@ -2,14 +2,27 @@ import React from 'react';
 import Link from 'react-router';
 
 class CampsiteShow extends React.Component {
-  componentDidMount () {
-    this.props.fetchCampsite(15);
+  componentDidMount() {
+    this.props.fetchCampsite(this.props.match.params.campsiteId);
+  }  
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.campsite.id != nextProps.match.params.campsiteId) {
+      this.props.fetchCampsite(nextProps.match.params.campsiteId);
+    }
   }
 
   render() {
-    console.log(this.props)
+    const { campsite } = this.props;
+    console.log(this.props);
+    if (!campsite) {
+    return (<div>Loading...</div>);
+    }
+
     return (
-      <h1>hello this is campsite show</h1>
+      <div>
+        <h1>hello this is campsite show</h1>
+      </div>
     );
 
   }
