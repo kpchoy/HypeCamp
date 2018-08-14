@@ -6,7 +6,7 @@ export default (oldState = {}, action) => {
     case RECEIVE_CAMPSITES:
       return merge({}, action.campsites);
     case RECEIVE_CAMPSITE:
-      return merge({}, oldState, {[action.campsite.id]: action.campsite});     
+      return action.payload.campsite;     
     default:
       return oldState;
   }

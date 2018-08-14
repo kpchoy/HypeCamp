@@ -17,7 +17,7 @@ export const fetchCampsite = (id) => dispatch => (
   CampsiteAPIUtil.fetchCampsite(id).then((campsite) => dispatch(receiveCampsite(campsite)))
 );
 
-const receiveCampsite = (campsite) => ({
+const receiveCampsite = (payload) => ({
   type: RECEIVE_CAMPSITE,
-  campsite
+  payload
 });

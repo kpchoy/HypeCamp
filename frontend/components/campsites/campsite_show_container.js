@@ -3,9 +3,9 @@ import CampsiteShow from './campsite_show';
 import {fetchCampsite} from '../../actions/campsite_actions';
 
 const mstp = (state, ownProps) => {  
-  console.log(state.entities.campsites);
   return ({
-    campsite: state.entities.campsites[ownProps.match.params.campsiteId]
+    campsite: state.entities.campsites[ownProps.match.params.campsiteId],
+    campsitePhotos: Object.values(state.entities.campsitePhotos)
   });
 };
 

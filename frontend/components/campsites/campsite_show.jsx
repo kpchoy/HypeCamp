@@ -6,15 +6,11 @@ class CampsiteShow extends React.Component {
     this.props.fetchCampsite(this.props.match.params.campsiteId);
   }  
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.campsite.id != nextProps.match.params.campsiteId) {
-      this.props.fetchCampsite(nextProps.match.params.campsiteId);
-    }
-  }
+
 
   render() {
-    const { campsite } = this.props;
-    console.log(this.props);
+    const { campsite, campsitePhotos } = this.props;
+
     if (!campsite) {
     return (<div>Loading...</div>);
     }
@@ -22,6 +18,8 @@ class CampsiteShow extends React.Component {
     return (
       <div>
         <h1>hello this is campsite show</h1>
+        <p>{campsite.title}</p>
+        <img src={campsitePhotos[0].image_url} />
       </div>
     );
 
