@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'react-router';
 import SplashItem from './splash_item';
+import { Link } from 'react-router-dom';
 
 class Splash extends React.Component {
 
@@ -46,66 +46,66 @@ class Splash extends React.Component {
           <h1 className="discover-camp">Discover camping...</h1>
           <ul className="camp-row">
             <li>
-              <a href="">
+              <Link to="/campsite/1">
                 <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/01-splah-soto.webp" />
                 <p>Tent Camping</p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to="/campsite/2">
                 <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/02-splash-wtto.webp" />
                 <p>Ocean Views</p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to="/campsite/3">
                 <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/03-splash-gbm.webp" />
                 <p>Glamping</p>
-              </a>
+              </Link>
             </li>
           </ul>
 
 
           <ul className="camp-row">
             <li>
-              <a href="">
+              <Link to="/campsite/4">
                 <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/04-splash-tmg.webp" />
                 <p>Tree House</p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to="/campsite/5">
                 <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/05-splash-fgl.webp" />
                 <p>Grazing Land</p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to="/campsite/6">
                 <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/06-splash-fff.webp" />
                 <p>Big Sur</p>
-              </a>
+              </Link>
             </li>
           </ul>
 
 
           <ul className="camp-row">
             <li>
-              <a href="">
+              <Link to="/campsite/7">
                 <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/07-splash-bbr.webp" />
                 <p>Mount Rainier</p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to="/campsite/8">
                 <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/08-splash-rdbc.webp" />
                 <p>Utah</p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to="/campsite/9">
                 <img src="https://s3-us-west-1.amazonaws.com/hypecamp-dev/09-splash-wwns.webp" />
                 <p>Idaho</p>
-              </a>
+              </Link>
             </li>
           </ul>
 

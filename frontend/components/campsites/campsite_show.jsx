@@ -6,8 +6,6 @@ class CampsiteShow extends React.Component {
     this.props.fetchCampsite(this.props.match.params.campsiteId);
   }  
 
- 
-
   render() {
     const { campsite, campsitePhotos } = this.props;
 
