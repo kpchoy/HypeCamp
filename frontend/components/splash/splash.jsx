@@ -1,8 +1,25 @@
 import React from 'react';
 import SplashItem from './splash_item';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+
 
 class Splash extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.history.push('/search');
+  }
 
   render() {
     return (
@@ -21,10 +38,13 @@ class Splash extends React.Component {
               <div className="s-search-icon" >
                 <i className="fas fa-location-arrow"></i>
               </div>
-              <input type="text"
-              placeholder="Camping near me..."
-              className="s-search-bar"
-              />
+              <form onSubmit={this.handleSubmit}>
+
+                <input type="text"
+                placeholder="Camping near me..."
+                className="s-search-bar"
+                />
+              </form>
             </div>
 
             <ul className="search-links-holder">

@@ -1,0 +1,29 @@
+.profile {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+  width: 800px;
+}
+
+.profile > h1 {
+  margin-top: 100px;
+  font-size: 25px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #ebebeb;
+  width: 200px;
+}
+
+.profile > h3 {
+  font-size: 22px;
+  margin-top: 100px;
+  border-bottom: solid 1px #ebebeb;
+  padding-bottom: 10px;
+  width: 300px;
+}
+
+.profile > h4 {
+  font-size: 20px;
+  margin-top: 100px;
+  border-bottom: solid 1px #ebebeb;
+  width: 400px; 
+}

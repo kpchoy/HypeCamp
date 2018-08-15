@@ -7,6 +7,7 @@ import {Route, Switch, Redirect} from 'react-router-dom';
 import SplashContainer from './splash/splash_container';
 import CampsiteShowContainer from './campsites/campsite_show_container';
 import SearchContainer from './search/search_container';
+import ProfileContainer from './profile/profile_container';
 
 const App = () => (
   <div>
@@ -18,6 +19,7 @@ const App = () => (
       <Route exact path="/" component={SplashContainer} />
       <Route path="/campsite/:campsiteId" component={CampsiteShowContainer} />
       <Route exact path="/search" component={SearchContainer} />
+      <Route path="/profile" component={ProfileContainer} />
       <Redirect to="/" />
     </Switch>
   </div>

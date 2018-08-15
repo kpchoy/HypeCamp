@@ -1,9 +1,33 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
-const Greeting = ({ currentUser, logout, openModal, login }) => {
-  const sessionLinks = () => (
-    <div className="greeting-header">
+
+class Greeting extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+
+  }
+  
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+     
+    this.props.history.push('/search');
+  }
+
+  render () {
+    const { currentUser, logout, openModal, login } = this.props;
+    
+
+    const sessionLinks = () => (
+      <div className="greeting-header">
       <section className="left-greeting">
         <Link to="/" className="link-hype-logo" >
           <h1 className="hype-logo">HYPECAMP</h1>
@@ -12,10 +36,13 @@ const Greeting = ({ currentUser, logout, openModal, login }) => {
           <div className="search-icon" >
             <i className="fa fa-search" aria-hidden="true"></i>
           </div>
-          <input type="text"
-          placeholder="Search..."
-          className="search-bar"
-          />
+          <form onSubmit={this.handleSubmit}>
+            <input type="text"
+            placeholder="Search..."
+            className="search-bar"
+            onSubmit={this.handleSubmit}
+            />
+          </form>
         </div>
       </section>
 
@@ -33,52 +60,52 @@ const Greeting = ({ currentUser, logout, openModal, login }) => {
 
     </div>
   );
-  const personalGreeting = () => (
-    <div className="greeting-header">
-      <section className="left-greeting">
-        <Link to="/" className="link-hype-logo" >
-          <h1 className="hype-logo">HYPECAMP</h1>
-        </Link>
-        <div className="main-searchbar">
-          <div className="search-icon" >
-            <i className="fa fa-search" aria-hidden="true"></i>
-          </div>
-          <input type="text"
-          placeholder="Search..."
-          className="search-bar"
-          />
-        </div>
-      </section>
-
-      <ul className="right-greeting">
-        <li>
-          <a className="right-greeting-icons" href="http://www.linkedin.com/in/kevin-choy-b5714b133" target="_blank"><i className="fab fa-linkedin"></i></a>
-        </li>
-        <li>
-          <a className="right-greeting-icons" href="https://github.com/kpchoy/HypeCamp" target="_blank"><i className="fab fa-github-square"></i></a>
-        </li>
-        <li><a className="right-greeting-links" href="">Scout</a></li>
-        <li><a className="right-greeting-links" href="">About</a></li>
-        <li><a className="loggedin-start-hosting" href="">Start hosting</a></li>
-        <li><a className="right-greeting-links" href="">Messages</a></li>
-      
-        <li>
-          <div className="dropdown">
-            <button className="dropbtn"><i className="fa fa-tree" aria-hidden="true"></i></button>
-            <div className="dropdown-content">
-              <a href="#">View Profile</a>
-              <a href="#">Your Trips</a>
-              <a href="#">Help & FAQ</a>
-              <a href="#" onClick={logout}>Log out</a>
+  
+    const personalGreeting = () => (
+      <div className="greeting-header">
+        <section className="left-greeting">
+          <Link to="/" className="link-hype-logo" >
+            <h1 className="hype-logo">HYPECAMP</h1>
+          </Link>
+          <div className="main-searchbar">
+            <div className="search-icon" >
+              <i className="fa fa-search" aria-hidden="true"></i>
             </div>
+            <input type="text"
+            placeholder="Search..."
+            className="search-bar"
+            />
           </div>
-        </li>
-      </ul>
-    </div>
-  );
+        </section>
 
-  return currentUser ? personalGreeting(currentUser, logout) : sessionLinks();
+        <ul className="right-greeting">
+          <li>
+            <a className="right-greeting-icons" href="http://www.linkedin.com/in/kevin-choy-b5714b133" target="_blank"><i className="fab fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a className="right-greeting-icons" href="https://github.com/kpchoy/HypeCamp" target="_blank"><i className="fab fa-github-square"></i></a>
+          </li>
+          <li><Link className="right-greeting-links" to="/search">Scout</Link></li>
+          <li><a className="right-greeting-links" href="">About</a></li>
+        
+          <li>
+            <div className="dropdown">
+              <button className="dropbtn"><i className="fa fa-tree" aria-hidden="true"></i></button>
+              <div className="dropdown-content">
+                <Link to="/profile">View Profile</Link>
+                <a href="#">Your Trips</a>
+                <a href="#">Help & FAQ</a>
+                <a href="#" onClick={logout}>Log out</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    );
+    
+    return currentUser ? personalGreeting(currentUser, logout) : sessionLinks();
+  }
 };
 
 
-export default Greeting;
+export default withRouter(Greeting);

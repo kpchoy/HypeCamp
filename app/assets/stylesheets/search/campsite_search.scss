@@ -6,7 +6,6 @@
 }
 
 .campsite-index {
-  align-content: center;
   display: flex;
   flex-wrap: wrap;
 }
@@ -51,12 +50,14 @@
   display: flex;
   justify-content: space-between;
   font-family: "Calibre", Helvetica, Arial, sans-serif;
-
 }
 
 .left-pane {
   display: flex;
   width: 790px;
   align-content: center;
-
+  height: 700px;
+  overflow: auto;
 }
+
+
