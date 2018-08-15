@@ -26,9 +26,9 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
+    
     return(
       <div className="errors-render">
-
         {this.props.errors[0]}
       </div>
     );
