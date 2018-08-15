@@ -1,4 +1,62 @@
 #map-container {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 700px;
+  border: solid 1px #ebebeb; 
+  box-shadow: 0 6px 6px rgba(0,0,0,0.1);
+}
+
+.campsite-index {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.campsite-index-item {
+  width: 370px;
+  margin: 10px;
+  height: 350px;
+  border: solid 1px #ebebeb; 
+  box-shadow: 0 6px 6px rgba(0,0,0,0.1);
+}
+
+.campsite-index-item-link {
+  text-decoration: none;
+}
+
+.campsite-index-item-link > h1 {
+  font-size: 20px;
+  font-weight: 540;
+  padding-left: 10px;
+}
+
+.campsite-index-item-link > p {
+  font-size: 15 px;
+  font-weight: 400;
+  padding-left: 10px;
+  border-bottom: solid 1px #ebebeb; 
+  padding-bottom: 5px;
+  width: 100px;
+
+}
+
+.campsite-index-item-img {
+  width: 370px;
+}
+
+.user-pane {
+  align-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+
+}
+
+.left-pane {
+  display: flex;
+  width: 790px;
+  align-content: center;
+
 }

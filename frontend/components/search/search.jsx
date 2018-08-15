@@ -9,25 +9,27 @@ class Search extends React.Component {
   }
 
   render() {
-    return (
+    
+    const allsites = this.props.campsites.map(campsite => {
+      return (
+        {lat: campsite.lat, lng: campsite.lng, title: campsite.title}
+      );
+    });
 
+    return (
       <div className="user-pane">
+        
+        <div className="left-pane">
+          <CampsiteIndex campsites={this.props.campsites} fetchCampsites={this.props.fetchCampsite} />
+        </div>
      
-        <div className="left-half">
-          <h5>Click Map to Find Campsite!</h5>
+        <div className="right-pane">
           <CampsiteMap
-            campsites={[
-              { lat: 37.775785, lng: -122.445979, name: "Papalote" },
-              { lat: 37.772045, lng: -122.437015, name: "The Little Chihuahua" },
-              { lat: 37.781899, lng: -122.410426, name: "Cancun" }
-            ]}
+            campsites={allsites}
             
             />
         </div>
 
-        <div className="right-half">
-          <CampsiteIndex campsites={this.props.campsites} fetchCampsites={this.props.fetchCampsite} />
-        </div>
 
         
       </div>

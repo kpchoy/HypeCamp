@@ -11,17 +11,16 @@ class CampsiteMap extends React.Component {
   
   componentDidMount() {
     const map = ReactDOM.findDOMNode(this.refs.map);
-
+    
     const options = {
       center: { lat: 37.7758, lng: -122.435 },
-      zoom: 13
+      zoom: 7
     };
 
     this.map = new google.maps.Map(map, options);
 
     // add a movement listener
     this.listenForMove();
-
     // we are going to add a map marker for each burrito place now
     this.props.campsites.forEach(this.addCampsite);
   }
@@ -34,7 +33,7 @@ class CampsiteMap extends React.Component {
     });
 
     marker.addListener('click', () => {
-      alert(`clicked on: ${campsite.name}`);
+      alert(`clicked on: ${campsite.title}`);
     });
   }
 
