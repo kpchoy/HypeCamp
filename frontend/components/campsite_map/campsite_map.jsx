@@ -10,6 +10,7 @@ class CampsiteMap extends React.Component {
   }
   
   componentDidMount() {
+    
     const map = ReactDOM.findDOMNode(this.refs.map);
     
     const options = {
@@ -22,15 +23,24 @@ class CampsiteMap extends React.Component {
     // add a movement listener
     this.listenForMove();
     // we are going to add a map marker for each burrito place now
-    if (this.props.campsites.length > 0 ) {
-      return this.props.campsites.forEach(this.addCampsite);
-    } else {
-      return null;
-    }
+
+    const hack = 
+    [{lat: 37.8651, lng: -119.5483, title: "Sanctuary Of The Oaks Site #10"},
+    {lat: 37.2017, lng: -122.4018, title: "Wild Tender Tipi Ocean View"},
+    {lat: 37.913, lng: -122.6996, title: "Glamping @ Big Mesa Farmstead"},
+    {lat: 38.2061, lng: -122.6829, title: "Treehouse Magic Grove"},
+    {lat: 37.7497, lng: -122.7779, title: "Free Grazing Land"},
+    {lat: 36.44, lng: -121.6657, title: "FollyFootFrolic"},
+    {lat: 47.1088, lng: -122.1192, title: "Bumps & Bruzas Riverfront"},
+    {lat: 37.6839, lng: -112.4104, title: "Running Deer TIPI near Bryce Canyon"},
+    {lat: 43.7542, lng: -111.1066, title: "Winter wonderland near skiing"}];
+
+   
+    hack.forEach(this.addCampsite);
+    
   }
 
   addCampsite(campsite) {
-    console.log(campsite)
     const pos = new google.maps.LatLng(campsite.lat, campsite.lng);
     const marker = new google.maps.Marker({
       position: pos,
@@ -64,7 +74,6 @@ class CampsiteMap extends React.Component {
 
   
   render() {
-  
 
     return (
     

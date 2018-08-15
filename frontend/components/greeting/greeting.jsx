@@ -1,12 +1,13 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-const Greeting = ({ currentUser, logout, openModal }) => {
+const Greeting = ({ currentUser, logout, openModal, login }) => {
   const sessionLinks = () => (
     <div className="greeting-header">
       <section className="left-greeting">
-        <a className="link-hype-logo" href="/">
+        <Link to="/" className="link-hype-logo" >
           <h1 className="hype-logo">HYPECAMP</h1>
-        </a>
+        </Link>
         <div className="main-searchbar">
           <div className="search-icon" >
             <i className="fa fa-search" aria-hidden="true"></i>
@@ -21,13 +22,13 @@ const Greeting = ({ currentUser, logout, openModal }) => {
       <section className="right-greeting">
         <a className="right-greeting-icons" href="http://www.linkedin.com/in/kevin-choy-b5714b133" target="_blank"><i className="fab fa-linkedin"></i></a>
         <a className="right-greeting-icons" href="https://github.com/kpchoy/HypeCamp" target="_blank"><i className="fab fa-github-square"></i></a>
-        <a className="right-greeting-links" href="">Scout</a>
+        <Link className="right-greeting-links" to="/search">Scout</Link>
         <a className="right-greeting-links" href="">About</a>
         <nav className="login-signup">
           <button className="signup-login-button" onClick={() => openModal('signup')}>Sign up</button>
           <button className="signup-login-button" onClick={() => openModal('login')}>Log in</button>
         </nav>
-        <button className="host-button">Start hosting</button>
+        <button className="demo-button" onClick={() => login({email: "Jim@gmail.com", password: "123456"})}>Demo Login</button>
       </section>
 
     </div>
@@ -35,7 +36,9 @@ const Greeting = ({ currentUser, logout, openModal }) => {
   const personalGreeting = () => (
     <div className="greeting-header">
       <section className="left-greeting">
-        <h1 className="hype-logo">HYPECAMP</h1>
+        <Link to="/" className="link-hype-logo" >
+          <h1 className="hype-logo">HYPECAMP</h1>
+        </Link>
         <div className="main-searchbar">
           <div className="search-icon" >
             <i className="fa fa-search" aria-hidden="true"></i>

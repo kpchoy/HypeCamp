@@ -10,6 +10,10 @@ class Search extends React.Component {
 
   render() {
 
+    if (!this.props.campsites) {
+      return (<div>Loading...</div>);
+    }
+
     const allsites = this.props.campsites.map(campsite => {
       return (
         {lat: campsite.lat, lng: campsite.lng, title: campsite.title}
@@ -27,8 +31,8 @@ class Search extends React.Component {
         <div className="right-pane">
           
           <CampsiteMap
-            campsites={allsites ? allsites : null}
-            
+            campsites={allsites}
+            fetchCampsites={this.props.fetchCampsites}
             />
         </div>
 
