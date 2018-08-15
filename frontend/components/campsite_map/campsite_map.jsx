@@ -22,10 +22,15 @@ class CampsiteMap extends React.Component {
     // add a movement listener
     this.listenForMove();
     // we are going to add a map marker for each burrito place now
-    this.props.campsites.forEach(this.addCampsite);
+    if (this.props.campsites.length > 0 ) {
+      return this.props.campsites.forEach(this.addCampsite);
+    } else {
+      return null;
+    }
   }
 
   addCampsite(campsite) {
+    console.log(campsite)
     const pos = new google.maps.LatLng(campsite.lat, campsite.lng);
     const marker = new google.maps.Marker({
       position: pos,
@@ -60,6 +65,7 @@ class CampsiteMap extends React.Component {
   
   render() {
   
+
     return (
     
       <div id='map-container' ref='map'/>

@@ -32,7 +32,7 @@ class Splash extends React.Component {
               <li className="li-c-i-o"><a className="notextdec" href="">Check-Out</a></li>
               <li className="splash-search-button">
                 <i className="fa fa-search" aria-hidden="true"></i>
-                <a className="notextdec" href=""> Search</a>
+                <Link className="notextdec" to="/search"> Search</Link>
               </li>
             </ul>
 

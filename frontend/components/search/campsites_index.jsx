@@ -10,7 +10,7 @@ class CampsiteIndex extends React.Component {
 
       <div className="campsite-index">
         {campsites.map(campsite => (
-          <CampsiteIndexItem key={campsite.id} campsite={campsite}/>
+          <CampsiteIndexItem key={campsite.id} campsite={campsite} />
         ))}
       </div>
       

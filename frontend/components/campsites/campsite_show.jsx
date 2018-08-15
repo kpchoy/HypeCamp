@@ -5,7 +5,9 @@ class CampsiteShow extends React.Component {
   componentDidMount() {
     this.props.fetchCampsite(this.props.match.params.campsiteId);
   }  
-
+  // <li><img src={campsitePhotos[0].image_url} /></li>
+  // <li><img src={campsitePhotos[1].image_url} /></li>
+  // <li><img src={campsitePhotos[3].image_url} /></li>
   render() {
     const { campsite, campsitePhotos } = this.props;
 
@@ -16,9 +18,10 @@ class CampsiteShow extends React.Component {
     return (
       <div className="main-camp-show">
         <ul className="upper-images">
-          <li><img src={campsitePhotos[0].image_url} /></li>
-          <li><img src={campsitePhotos[1].image_url} /></li>
-          <li><img src={campsitePhotos[3].image_url} /></li>
+        <li><img src={campsitePhotos[0] ? campsitePhotos[0].image_url : ''} /></li>
+        <li><img src={campsitePhotos[1] ? campsitePhotos[1].image_url : ''} /></li>
+        <li><img src={campsitePhotos[2] ? campsitePhotos[2].image_url : ''} /></li>
+
         </ul>
         
         <section className="show-body">
