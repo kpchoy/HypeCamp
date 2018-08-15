@@ -3,31 +3,68 @@ import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router-dom';
 
 
-const getCoordsObj = latLng => ({
-  lat: latLng.lat(),
-  lng: latLng.lng()
-});
-
-const mapOptions = {
-  center: {
-    lat: 37.773972,
-    lng: -122.431297
-  }, // San Francisco coords
-  zoom: 6
-};
-
 class CampsiteMap extends React.Component {
-  
-  componentDidMount() {
-    this.map = new google.maps.Map(this.mapNode, mapOptions);
+  constructor(props) {
+    super(props);
+    this.addCampsite = this.addCampsite.bind(this);
   }
   
+  componentDidMount() {
+    const map = ReactDOM.findDOMNode(this.refs.map);
+
+    const options = {
+      center: { lat: 37.7758, lng: -122.435 },
+      zoom: 13
+    };
+
+    this.map = new google.maps.Map(map, options);
+
+    // add a movement listener
+    this.listenForMove();
+
+    // we are going to add a map marker for each burrito place now
+    this.props.campsites.forEach(this.addCampsite);
+  }
+
+  addCampsite(campsite) {
+    const pos = new google.maps.LatLng(campsite.lat, campsite.lng);
+    const marker = new google.maps.Marker({
+      position: pos,
+      map: this.map
+    });
+
+    marker.addListener('click', () => {
+      alert(`clicked on: ${campsite.name}`);
+    });
+  }
+
+  listenForMove() {
+    /* 
+     * we listen for the map to emit an 'idle' event, it does this when
+     * the map stops moving
+     */
+    google.maps.event.addListener(this.map, 'idle', () => {
+      const bounds = this.map.getBounds();
+
+      console.log('center',
+        bounds.getCenter().lat(), 
+        bounds.getCenter().lng());
+      console.log("north east",
+        bounds.getNorthEast().lat(), 
+        bounds.getNorthEast().lng());
+      console.log("south west",
+        bounds.getSouthWest().lat(), 
+        bounds.getSouthWest().lng());
+    });
+  }
+
   
   render() {
-    console.log(this.props);
+  
     return (
-      <div ref={ map => this.mapNode = map } id="map-container">
-      </div>
+    
+      <div id='map-container' ref='map'/>
+
     );
   }
 }

@@ -10,7 +10,11 @@ const Search = ({ campsites }) => (
     <div className="left-half">
       <h5>Click Map to Find Campsite!</h5>
       <CampsiteMap
-        campsites={campsites}
+        campsites={[
+          { lat: 37.775785, lng: -122.445979, name: "Papalote" },
+          { lat: 37.772045, lng: -122.437015, name: "The Little Chihuahua" },
+          { lat: 37.781899, lng: -122.410426, name: "Cancun" }
+        ]}
        
       />
     </div>
