@@ -9,11 +9,28 @@ class BookingIndex extends React.Component {
   }
 
   render () {
+    console.log(this.props)
     return (
-      <div className="">
-        {this.props.bookings.map((booking) => (
-          <BookingIndexItem key={booking.id} booking={booking} />
-        ))}
+      <div className="trips-main">
+        <div className="trips-left">
+          
+            {this.props.campsites.map((campsite) => (
+              <ul className="trips-left-site" key={campsite.id}>
+                <img className="trips-imgs" src={campsite.thumbnail} />
+                <li>{campsite.title}</li>
+              </ul>
+            ))}
+          
+        </div>
+
+        <div className="trips-right">
+          {this.props.bookings.map((booking) => (
+            <BookingIndexItem 
+            key={booking.id} 
+            booking={booking}  
+            />
+          ))}
+        </div>
 
       </div>     
     );

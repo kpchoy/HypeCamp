@@ -26,10 +26,10 @@ const removeBooking = (bookingId) => ({
 });
 
 export const fetchBookings = () => dispatch => (
-  APIUtil.fetchBookings().then(bookings => dispatch(receiveBookings(bookings)))
+  APIUtil.fetchBookings().then(payload => dispatch(receiveBookings(payload)))
 );
 
-const receiveBookings = (bookings) => ({
+const receiveBookings = (payload) => ({
   type: RECEIVE_BOOKINGS,
-  bookings 
+  payload 
 });

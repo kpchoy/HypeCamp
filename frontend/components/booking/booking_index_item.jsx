@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router';
 
 class BookingIndexItem extends React.Component {
-
+  
   render () {
     return (
-      <div className="">
+      <div className="trips-right-info">
         <ul>
-          <li>{this.props.booking.check_in}</li>
-          <li>{this.props.booking.check_out}</li>
-          <li>{this.props.booking.guests}</li>
+          <li>Check In: {this.props.booking.check_in}</li>
+          <li>Check Out: {this.props.booking.check_out}</li>
+          <li>Guests: {this.props.booking.guests}</li>
 
         </ul>
       </div>     

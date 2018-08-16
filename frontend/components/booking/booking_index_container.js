@@ -4,7 +4,8 @@ import BookingIndex from './booking_index';
 
 const mstp = (state) => {
   return ({
-    bookings: Object.values(state.entities.bookings) 
+    bookings: Object.values(state.entities.bookings),
+    campsites: Object.values(state.entities.campsites)
   });
 };
 

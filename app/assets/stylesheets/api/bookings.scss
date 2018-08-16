@@ -1,3 +1,59 @@
 // Place all the styles related to the Api::Bookings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.trips-main {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trips-imgs {
+  height: 200px;
+  width: 300px;
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+.trips-left {
+  width: 400px;
+}
+
+.trips-left-site {
+  height: 300px;
+  margin-bottom: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.trips-left-site > li {
+  list-style: none;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+
+
+
+.trips-right-info {
+  height: 300px;
+  width: 300px;
+  left: 0;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.trips-right-info > ul {
+  align-content: center;
+  left: 0; 
+}
+
+.trips-right-info > ul > li {
+  list-style: none; 
+  font-size: 16px;
+  padding: 20px;
+  left: 0;
+}

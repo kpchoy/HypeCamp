@@ -177,5 +177,5 @@ check_in: Date.new(2017,1,20), check_out: Date.new(2017,2,9))
 b4u2 = Booking.create!(campsite_id: c4.id, guest_id: u2.id, guests: 7, 
 check_in: Date.new(2017,12,3), check_out: Date.new(2017,12,24))
 b5u2 = Booking.create!(campsite_id: c5.id, guest_id: u2.id, guests: 3, 
-check_in: Date.new(2018,1,3), check_out: Date.new(2016,1,17))
+check_in: Date.new(2018,1,3), check_out: Date.new(2018,1,17))
 

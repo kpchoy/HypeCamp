@@ -93,7 +93,6 @@ class Greeting extends React.Component {
               <button className="dropbtn"><i className="fa fa-tree" aria-hidden="true"></i></button>
               <div className="dropdown-content">
                 <Link to="/profile">View Profile</Link>
-                <a href="#">Your Trips</a>
                 <a href="#">Help & FAQ</a>
                 <a href="#" onClick={logout}>Log out</a>
               </div>
