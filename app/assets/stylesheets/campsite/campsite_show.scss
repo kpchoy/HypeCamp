@@ -32,7 +32,7 @@
 }
 
 
-.show-body-right {
+.show-body-right form {
   width: 300px;
   height: 300px;
   border: solid 1px #ebebeb; 
@@ -57,30 +57,30 @@
   padding: 0;
 }
 
-.show-body-right > ul {
+.show-body-right form > ul {
   padding-left: 0;
   display: flex;
   height: 100px;
   justify-content: space-between;
 }
 
-.show-body-right > ul > li {
+.show-body-right form > ul > li {
   list-style: none;
   padding-left: 5px;
   width: 100px;
   border: solid 1px #ebebeb; 
 }
 
-.show-body-right > ul > li > h3 {
+.show-body-right form > ul > li > h3 {
   font-size: 16px;
 }
 
-.show-body-right > section {
+.show-body-right form > section {
   display: flex;
   justify-content: space-around;
 }
 
-.show-body-right > section > a {
+.show-body-right form > section > a {
   background: #40d9ac;
   color: white;
   padding: 30px 70px 30px 70px; 
