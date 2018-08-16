@@ -13,6 +13,10 @@ class Api::BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end 
 
+  def index
+    @bookings = current_user.bookings 
+  end 
+
   def destroy  
     @booking = Booking.find(params[:id])
    

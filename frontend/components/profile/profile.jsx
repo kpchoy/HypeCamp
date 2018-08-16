@@ -1,11 +1,10 @@
 import React from 'react';
-
+import BookingIndexContainer from '../booking/booking_index_container';
 
 class Profile extends React.Component {
 
 
   render () {
-    console.log(this.props);
     return (
       <div className="profile">
         <h1>
@@ -15,9 +14,9 @@ class Profile extends React.Component {
          
         </h1>
 
-        <h3>Upcoming Trips</h3>
+        <h3>Trips</h3>
         
-        <h4>Past Trips</h4>
+        <BookingIndexContainer /> 
 
       </div>
     );

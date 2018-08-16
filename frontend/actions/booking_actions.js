@@ -1,5 +1,6 @@
 import * as  APIUtil from '../util/booking_api_util';
 export const RECEIVE_BOOKING = "RECEIVE_BOOKING";
+export const RECEIVE_BOOKINGS = "RECEIVE_BOOKINGS";
 export const REMOVE_BOOKING = "REMOVE_BOOKING";
 
 export const fetchBooking = (id) => dispatch => (
@@ -22,4 +23,13 @@ export const deleteBooking = (bookingId) => dispatch => (
 const removeBooking = (bookingId) => ({
   type: REMOVE_BOOKING,
   bookingId 
+});
+
+export const fetchBookings = () => dispatch => (
+  APIUtil.fetchBookings().then(bookings => dispatch(receiveBookings(bookings)))
+);
+
+const receiveBookings = (bookings) => ({
+  type: RECEIVE_BOOKINGS,
+  bookings 
 });
