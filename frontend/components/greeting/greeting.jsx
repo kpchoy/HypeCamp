@@ -86,7 +86,7 @@ class Greeting extends React.Component {
             <a className="right-greeting-icons" href="https://github.com/kpchoy/HypeCamp" target="_blank"><i className="fab fa-github-square"></i></a>
           </li>
           <li><Link className="right-greeting-links" to="/search">Scout</Link></li>
-          <li><a className="right-greeting-links" href="">About</a></li>
+          <li><Link className="right-greeting-links" to="/about">About</Link></li>
         
           <li>
             <div className="dropdown">

@@ -9,6 +9,7 @@
     "lodash": "^4.17.10",
     "logger": "0.0.1",
     "react": "^16.4.2",
+    "react-calendar": "^2.16.1",
     "react-dom": "^16.4.2",
     "react-numeric-input": "^2.2.3",
     "react-redux": "^5.0.7",

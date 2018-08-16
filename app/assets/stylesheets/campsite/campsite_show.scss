@@ -24,7 +24,7 @@
 .show-body {
   margin-right: auto;
   margin-left: auto;
-  width: 900px;
+  width: 1000px;
   display: flex;
   justify-content: space-between;
   color: #333333;
@@ -33,17 +33,16 @@
 
 
 .show-body-right form {
-  width: 300px;
+  width: 430px;
   height: 300px;
   border: solid 1px #ebebeb; 
   align-items: center;
-  background: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .show-body-price {
   height: 80px; 
-  padding-left: 10px;
+  padding-left: 50px;
 }
 
 .show-body-price > h1 {
@@ -60,14 +59,18 @@
 .show-body-right form > ul {
   padding-left: 0;
   display: flex;
-  height: 100px;
+  height: 80px;
   justify-content: space-between;
+}
+
+.guest-num-cont {
+  width: 50px;
 }
 
 .show-body-right form > ul > li {
   list-style: none;
   padding-left: 5px;
-  width: 100px;
+  width: 140px;
   border: solid 1px #ebebeb; 
 }
 

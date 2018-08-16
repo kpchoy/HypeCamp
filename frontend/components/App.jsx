@@ -8,6 +8,7 @@ import SplashContainer from './splash/splash_container';
 import CampsiteShowContainer from './campsites/campsite_show_container';
 import SearchContainer from './search/search_container';
 import ProfileContainer from './profile/profile_container';
+import About from './about/about';
 
 const App = () => (
   <div>
@@ -20,6 +21,7 @@ const App = () => (
       <Route path="/campsite/:campsiteId" component={CampsiteShowContainer} />
       <Route exact path="/search" component={SearchContainer} />
       <Route path="/profile" component={ProfileContainer} />
+      <Route path="/about" component={About}/>
       <Redirect to="/" />
     </Switch>
   </div>

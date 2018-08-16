@@ -1,14 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router';
-import NumericInput from 'react-numeric-input';
+import { withRouter } from 'react-router-dom';
  
 
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
+    this.state = props.booking;
+
   }
 
+  update(property) {
+     
+    return e => this.setState({
+      [property]: e.target.value
+    });
+  }
+
+
+
   render () {
+    console.log(this.state);
     return (
       <div className="show-body-right">
         <form>
@@ -18,23 +30,19 @@ class BookingForm extends React.Component {
           </div>
           
           <ul>
-            <li>
+            <li className="show-body-right-checkio">
               <h3>Check In</h3>
+              <input 
+                type="date"/>
             </li>
-            <li>
+            <li className="show-body-right-checkio">
               <h3>Check Out</h3>
+              <input 
+                type="date"/>
             </li>
-            <li>
+            <li className="guest-num-cont">
               <h3>Guests</h3>
-              <NumericInput 
-                value="4" 
-                min={ 0 } 
-                max={ 10 } 
-                step={ 1 } 
-                precision={ 0 } 
-                size = { 3 }
-                mobile
-              />
+              
             </li>
           </ul>
           <section>
@@ -46,4 +54,4 @@ class BookingForm extends React.Component {
   }
 }
 
-export default BookingForm;
+export default withRouter(BookingForm);

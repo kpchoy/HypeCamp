@@ -6,9 +6,7 @@ class CampsiteShow extends React.Component {
   componentDidMount() {
     this.props.fetchCampsite(this.props.match.params.campsiteId);
   }  
-  // <li><img src={campsitePhotos[0].image_url} /></li>
-  // <li><img src={campsitePhotos[1].image_url} /></li>
-  // <li><img src={campsitePhotos[3].image_url} /></li>
+
   render() {
     const { campsite, campsitePhotos } = this.props;
 
@@ -36,7 +34,7 @@ class CampsiteShow extends React.Component {
 
 
           
-          <BookingFormContainer campsite={campsite}/>
+          <BookingFormContainer campsite={campsite} campsiteId={campsite.id}/>
         </section>
 
       </div>
