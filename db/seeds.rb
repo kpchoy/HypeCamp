@@ -167,4 +167,7 @@ c9p5 = CampsitePhoto.create(campsite_id: c9.id,
 image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/09-wwns/05-wwns.webp")
 
 
+Booking.delete_all
+b1u2 = Booking.create!(campsite_id: c3.id, guest_id: u2.id, guests: 4, 
+check_in: Date.new(2016,2,3), check_out: Date.new(2016,2,10))
 

@@ -132,14 +132,13 @@ class SessionForm extends React.Component {
             <br/>
             <button className="sf-join-login" type="submit">{this.props.formType}</button>
 
-            {this.renderterms()}
-
-            {this.renderNoAcct()}
-
           </div>
-        {this.renderErrors()}
         </form>
         
+        {this.renderterms()}
+        {this.renderNoAcct()}
+        
+        {this.renderErrors()}
       </div>
     );
   }

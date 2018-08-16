@@ -7,6 +7,8 @@ class User < ApplicationRecord
       foreign_key: :owner_id,
       class_name: :Campsite 
 
+    has_many :bookings
+
     attr_reader :password
 
     after_initialize :ensure_session_token
