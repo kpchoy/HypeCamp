@@ -7,20 +7,30 @@ class BookingForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = props.booking;
-
+    this.handleNumGuest.bind(this);
   }
 
   update(property) {
-     
     return e => this.setState({
       [property]: e.target.value
     });
   }
 
+  handleNumGuest(step) {
+    return e => {
+      if (step === "+" && (this.state.guests < 10)) {
+        this.setState({guests: (this.state.guests + 1)});
+      } else if (step == "-" && (this.state.guests > 1)) {
+        this.setState({guests: (this.state.guests - 1)});
+      }
+    };
+  }
 
 
   render () {
     console.log(this.state);
+    const {checkIn, checkOut, guests} = this.state;
+
     return (
       <div className="show-body-right">
         <form>
@@ -33,16 +43,28 @@ class BookingForm extends React.Component {
             <li className="show-body-right-checkio">
               <h3>Check In</h3>
               <input 
-                type="date"/>
+                type="date"
+                value={checkIn}
+                onChange={this.update('checkIn')}/>
             </li>
             <li className="show-body-right-checkio">
               <h3>Check Out</h3>
               <input 
-                type="date"/>
+                type="date"
+                value={checkOut}
+                onChange={this.update('checkOut')}/>
             </li>
             <li className="guest-num-cont">
               <h3>Guests</h3>
-              
+              <div className="guest-adder-sub">
+                <button
+                onClick={this.handleNumGuest('-')}
+                >-</button>
+                <p className="guest-num-holder">{guests}</p>
+                <button
+                onClick={this.handleNumGuest('+')}
+                >+</button>
+              </div>
             </li>
           </ul>
           <section>

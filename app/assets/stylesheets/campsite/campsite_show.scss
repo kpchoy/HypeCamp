@@ -64,7 +64,30 @@
 }
 
 .guest-num-cont {
-  width: 50px;
+  width: 80px;
+  align-content: center;
+}
+
+.guest-adder-sub {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.guest-adder-sub > button {
+  margin-top: -10px;
+  height: 20px;
+  font-size: 20px;
+  border: none;
+}
+
+.guest-adder-sub > button:hover {
+  cursor: pointer;
+}
+
+.guest-num-holder {
+  margin-top: -5px;
 }
 
 .show-body-right form > ul > li {
