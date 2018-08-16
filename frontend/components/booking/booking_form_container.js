@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {fetchBooking, createBooking, deleteBooking} from '../../actions/booking_actions';
+import {createBooking, deleteBooking} from '../../actions/booking_actions';
 import BookingForm from './booking_form';
 
 const mstp = (state, ownProps) => {
@@ -9,7 +9,7 @@ const mstp = (state, ownProps) => {
 };
 
 const mdtp = (dispatch) => ({
-
+  createBooking: (booking) => dispatch(createBooking(booking))
 });
 
 export default connect(mstp, mdtp)(BookingForm);

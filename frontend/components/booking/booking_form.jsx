@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
+import NumericInput from 'react-numeric-input';
+ 
 
 class BookingForm extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render () {
     return (
       <div className="show-body-right">
@@ -14,14 +20,21 @@ class BookingForm extends React.Component {
           <ul>
             <li>
               <h3>Check In</h3>
-              <input type="date" />
             </li>
             <li>
               <h3>Check Out</h3>
-              <input type="date" />
             </li>
             <li>
               <h3>Guests</h3>
+              <NumericInput 
+                value="4" 
+                min={ 0 } 
+                max={ 10 } 
+                step={ 1 } 
+                precision={ 0 } 
+                size = { 3 }
+                mobile
+              />
             </li>
           </ul>
           <section>
