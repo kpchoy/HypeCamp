@@ -7,31 +7,31 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.delete_all
-u1 = User.create(email: 'Dwight@gmail.com', first_name: "Dwight", 
+u1 = User.create!(email: 'Dwight@gmail.com', first_name: "Dwight", 
   last_name: "Schrute", password: "123456")
-u2 = User.create(email: 'Jim@gmail.com', first_name: "Jim", 
+u2 = User.create!(email: 'Jim@gmail.com', first_name: "Jim", 
   last_name: "Halpert", password: "123456")
-u3 = User.create(email: 'Pam@gmail.com', first_name: "Pam",
+u3 = User.create!(email: 'Pam@gmail.com', first_name: "Pam",
   last_name: "Beasly", password: "123456")
-u4 = User.create(email: 'Michael@gmail.com', first_name: "Michael", 
+u4 = User.create!(email: 'Michael@gmail.com', first_name: "Michael", 
   last_name: "Scott", password: "123456")
-u5 = User.create(email: 'Stanley@gmail.com', first_name: "Stanley",
+u5 = User.create!(email: 'Stanley@gmail.com', first_name: "Stanley",
   last_name: "Hudson", password: "123456")
 
 
 Campsite.delete_all
-c1 = Campsite.create(owner_id: u1.id, title: "Sanctuary Of The Oaks Site #10", 
+c1 = Campsite.create!(owner_id: u1.id, title: "Sanctuary Of The Oaks Site #10", 
   description: "This is a single tent campsite.
   Pitch you tent on this 12' X 15' tent pad on the hill off by itself. Cook your meals in our communal outdoor kitchen equipped with sink (cold water only), plenty of counter space, propane stove, earth oven and our fire-brick table. Picnic tables and fire pit in immediate area. ",
   daily_rate: 25, state: "California", lat: 37.8651, lng: -119.5483,
   thumbnail: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/01-soto/01-soto.webp")
 
-c2 = Campsite.create(owner_id: u3.id, title: "Wild Tender Tipi Ocean View", 
+c2 = Campsite.create!(owner_id: u3.id, title: "Wild Tender Tipi Ocean View", 
   description: "Very peaceful and private immersion into the beautiful wild lands of the Coast. Amazing! Views! of Ocean and Coastal mountains. Great smells, lots of wildlife and star gazing!",
   daily_rate: 100, state: "California", lat: 37.2017, lng: -122.4018,
   thumbnail: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/02-wtto/01-wtto.webp")
 
-c3 = Campsite.create(owner_id: u3.id, title: "Glamping @ Big Mesa Farmstead", 
+c3 = Campsite.create!(owner_id: u3.id, title: "Glamping @ Big Mesa Farmstead", 
   description: "Big Mesa Farmstead is a 10-acre homestead close to epic beaches and wide open nature. We're surrounded by preserved agricultural property and Pt. Reyes National Seashore, so you'll really feel like you've escaped the city. ",
   daily_rate: 175, state: "California", lat: 37.9130, lng: -122.6996,
   thumbnail: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/03-gbm/01-gbm.webp")
@@ -144,30 +144,38 @@ image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/07-bbr/04-bbr.webp")
 c7p5 = CampsitePhoto.create(campsite_id: c7.id,
 image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/07-bbr/05-bbr.webp")
 
-c8p1 = CampsitePhoto.create(campsite_id: c8.id,
+c8p1 = CampsitePhoto.create!(campsite_id: c8.id,
 image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/08-rdbc/01-rdbc.webp")
-c8p2 = CampsitePhoto.create(campsite_id: c8.id,
+c8p2 = CampsitePhoto.create!(campsite_id: c8.id,
 image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/08-rdbc/02-rdbc.webp")
-c8p3 = CampsitePhoto.create(campsite_id: c8.id,
+c8p3 = CampsitePhoto.create!(campsite_id: c8.id,
 image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/08-rdbc/03-rdbc.webp")
-c8p4 = CampsitePhoto.create(campsite_id: c8.id,
+c8p4 = CampsitePhoto.create!(campsite_id: c8.id,
 image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/08-rdbc/04-rdbc.webp")
-c8p5 = CampsitePhoto.create(campsite_id: c8.id,
+c8p5 = CampsitePhoto.create!(campsite_id: c8.id,
 image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/08-rdbc/05-rdbc.webp")
 
-c9p1 = CampsitePhoto.create(campsite_id: c9.id,
+c9p1 = CampsitePhoto.create!(campsite_id: c9.id,
 image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/09-wwns/01-wwns.webp")
-c9p2 = CampsitePhoto.create(campsite_id: c9.id,
+c9p2 = CampsitePhoto.create!(campsite_id: c9.id,
 image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/09-wwns/02-wwns.webp")
-c9p3 = CampsitePhoto.create(campsite_id: c9.id,
+c9p3 = CampsitePhoto.create!(campsite_id: c9.id,
 image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/09-wwns/03-wwns.webp")
-c9p4 = CampsitePhoto.create(campsite_id: c9.id,
+c9p4 = CampsitePhoto.create!(campsite_id: c9.id,
 image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/09-wwns/04-wwns.webp")
-c9p5 = CampsitePhoto.create(campsite_id: c9.id,
+c9p5 = CampsitePhoto.create!(campsite_id: c9.id,
 image_url: "https://s3-us-west-1.amazonaws.com/hypecamp-dev/09-wwns/05-wwns.webp")
 
 
 Booking.delete_all
 b1u2 = Booking.create!(campsite_id: c3.id, guest_id: u2.id, guests: 4, 
 check_in: Date.new(2016,2,3), check_out: Date.new(2016,2,10))
+b2u2 = Booking.create!(campsite_id: c2.id, guest_id: u2.id, guests: 5, 
+check_in: Date.new(2017,4,7), check_out: Date.new(2017,4,20))
+b3u2 = Booking.create!(campsite_id: c1.id, guest_id: u2.id, guests: 3, 
+check_in: Date.new(2017,1,20), check_out: Date.new(2017,2,9))
+b4u2 = Booking.create!(campsite_id: c4.id, guest_id: u2.id, guests: 7, 
+check_in: Date.new(2017,12,3), check_out: Date.new(2017,12,24))
+b5u2 = Booking.create!(campsite_id: c5.id, guest_id: u2.id, guests: 3, 
+check_in: Date.new(2018,1,3), check_out: Date.new(2016,1,17))
 

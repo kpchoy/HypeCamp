@@ -134,11 +134,13 @@ class SessionForm extends React.Component {
 
           </div>
         </form>
-        
-        {this.renderterms()}
-        {this.renderNoAcct()}
-        
-        {this.renderErrors()}
+        <div className="bot-mod-items">
+          {this.renderterms()}
+          {this.renderNoAcct()}
+          
+          {this.renderErrors()}
+
+        </div>
       </div>
     );
   }

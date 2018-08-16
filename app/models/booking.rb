@@ -4,4 +4,11 @@ class Booking < ApplicationRecord
   belongs_to :user,
     foreign_key: :guest_id,
     class_name: :User 
+
+  belongs_to :campsite 
+
+  has_many :campsite_photos,
+    through: :campsite,
+    source: :campsite_photos
+
 end
