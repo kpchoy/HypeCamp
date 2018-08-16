@@ -14,11 +14,11 @@ class BookingForm extends React.Component {
           <ul>
             <li>
               <h3>Check In</h3>
-              
+              <input type="date" />
             </li>
             <li>
               <h3>Check Out</h3>
-              
+              <input type="date" />
             </li>
             <li>
               <h3>Guests</h3>
