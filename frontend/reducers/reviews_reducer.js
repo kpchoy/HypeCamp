@@ -8,7 +8,8 @@ export default (state = {}, action) => {
     case RECEIVE_CAMPSITE: 
       return merge({}, action.payload.reviews);
     case RECEIVE_REVIEW:
-      return merge({}, state, {[action.review.id]: action.review});
+       
+      return merge({}, state, {[action.review.review.id]: action.review.review});
     default:
       return state;
   }
