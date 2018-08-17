@@ -47,12 +47,27 @@ class BookingForm extends React.Component {
 
     return (
       <div className="show-body-right">
+        <div className="show-price-guest-num">
           <div className="show-body-price">
             <h1>$ {this.props.campsite.daily_rate}</h1>
             <p>per night</p>
           </div>
+          <div className="guest-num-cont">
+            <h3>Guests</h3>
+            <div className="guest-adder-sub">
+              <button
+              onClick={this.handleNumGuest('-')}
+              >-</button>
+              <p className="guest-num-holder">{guests}</p>
+              <button
+        
+              onClick={this.handleNumGuest('+')}
+              >+</button>
+            </div>
+          </div>
+        </div>
           
-          <ul>
+          <ul >
             <li className="show-body-right-checkio">
               <h3>Check In</h3>
               <input 
@@ -66,18 +81,6 @@ class BookingForm extends React.Component {
                 type="date"
                 value={checkOut}
                 onChange={this.update('checkOut')}/>
-            </li>
-            <li className="guest-num-cont">
-              <h3>Guests</h3>
-              <div className="guest-adder-sub">
-                <button
-                onClick={this.handleNumGuest('-')}
-                >-</button>
-                <p className="guest-num-holder">{guests}</p>
-                <button
-                onClick={this.handleNumGuest('+')}
-                >+</button>
-              </div>
             </li>
           </ul>
           <section>

@@ -33,16 +33,22 @@
 
 
 .show-body-right {
-  width: 430px;
+  width: 300px;
   height: 300px;
   border: solid 1px #ebebeb; 
   align-items: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.show-price-guest-num {
+  display: flex;
+  justify-content: space-between;
+}
+
 .show-body-price {
   height: 80px; 
-  padding-left: 50px;
+  padding-left: 20px;
+  margin-right: -20px;
 }
 
 .show-body-price > h1 {
@@ -54,6 +60,7 @@
 .show-body-price > p {
   margin: 0;
   padding: 0;
+  
 }
 
 .show-body-right > ul {
@@ -61,11 +68,19 @@
   display: flex;
   height: 80px;
   justify-content: space-between;
+  margin: 0;
 }
 
 .guest-num-cont {
-  width: 80px;
-  align-content: center;
+  height: 80px;
+  width: 150px;
+  padding-bottom: 10px;
+  border-left: solid 1px #ebebeb; 
+
+}
+
+.guest-num-cont > h3 {
+  padding-left: 40px;
 }
 
 .guest-adder-sub {
@@ -77,10 +92,12 @@
 
 .guest-adder-sub > button {
   margin-top: -10px;
+  margin-left: 30px;
   height: 20px;
   font-size: 20px;
   border: none;
 }
+
 
 .guest-adder-sub > button:hover {
   cursor: pointer;
@@ -88,12 +105,14 @@
 
 .guest-num-holder {
   margin-top: -5px;
+  margin-left: 18px;
+  font-size: 18px;
 }
 
 .show-body-right ul > li {
   list-style: none;
   padding-left: 5px;
-  width: 140px;
+  width: 150px;
   border: solid 1px #ebebeb; 
 }
 
@@ -102,6 +121,7 @@
 }
 
 .show-body-right section {
+  padding-top: 20px;
   display: flex;
   justify-content: space-around;
 }
