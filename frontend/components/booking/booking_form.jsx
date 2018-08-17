@@ -9,6 +9,7 @@ class BookingForm extends React.Component {
     this.state = props.booking;
     this.handleNumGuest = this.handleNumGuest.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.reRenderPage = this.reRenderPage.bind(this);
   }
 
   update(property) {
@@ -27,16 +28,21 @@ class BookingForm extends React.Component {
     };
   }
 
+  
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createBooking(this.state);
-
+    this.props.createBooking(this.state)
+      .then(() => this.reRenderPage())
+      .then(() => this.props.history.push('/profile'));
+    
+  }
+  
+  reRenderPage() {
+    this.setState({['checkIn']: "", ['checkOut']: "", ['guests']: 1});
   }
 
-
   render () {
-    console.log(this.state);
-    console.log(this.props);
+    
     const {checkIn, checkOut, guests} = this.state;
 
     return (

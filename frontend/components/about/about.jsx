@@ -6,7 +6,7 @@ class About extends React.Component {
     return (
       <div className="about-main">
         <h1>Find yourself outside</h1>
-        <h2> Hypecamp is everywhere you want to camp. Search, discover and book ranches,
+        <h2> Hypecamp is everywhere you want to camp, with your best fit. Search, discover and book ranches,
         farms, vineyards, nature preserves & public sites for camping across the U.S.</h2>
         <p>  </p>
         <div>

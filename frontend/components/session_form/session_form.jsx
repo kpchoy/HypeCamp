@@ -73,7 +73,7 @@ class SessionForm extends React.Component {
 
           <p className="">Already a Hipcamper? {this.props.otherForm}</p>
         </div>
-      )
+      );
     }
   }
 
