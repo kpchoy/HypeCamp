@@ -1,6 +1,7 @@
 json.campsite do
   json.set! @campsite.id do 
     json.partial! '/api/campsites/campsite', campsite: @campsite
+    json.extract! @campsite.user, :first_name
   end 
 end
 

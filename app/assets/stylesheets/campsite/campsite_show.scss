@@ -79,7 +79,6 @@
   width: 150px;
   padding-bottom: 10px;
   border-left: solid 1px #ebebeb; 
-
 }
 
 .guest-num-cont > h3 {
@@ -154,7 +153,6 @@
 
 .show-body-description {
   font-size: 18px;
-  border-bottom:  solid 1px #ebebeb; 
   padding-bottom: 5px;
   width: 100px;
   font-weight: bold;
@@ -170,4 +168,48 @@
   font-size: 34px;
   border-bottom:  solid 1px #ebebeb; 
   padding-bottom: 20px;
+}
+
+.description-div {
+  display: flex;
+  border-bottom:  solid 1px #ebebeb; 
+  padding-bottom: 30px;
+}
+
+.description-div > section {
+  width: 140px;
+}
+
+.description-amenities {
+  width: 510px;
+}
+
+.amenities {
+  display: flex;
+  justify-content: space-around;
+}
+
+.amenities-left > p {
+  margin-top: 20px;
+  font-size: 16px;
+  
+}
+
+.amenities-right > p {
+  margin-top: 20px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.activities{
+  display: flex;
+  justify-content: space-around;
+}
+
+.activities-left {
+  margin-left: 50px;
+}
+
+.activities-right {
+  margin-left: 130px;
 }

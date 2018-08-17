@@ -15,7 +15,6 @@ class CampsiteShow extends React.Component {
     if (!campsite) {
     return (<div>Loading...</div>);
     }
-
     return (
       <div className="main-camp-show">
         <ul className="upper-images">
@@ -30,8 +29,77 @@ class CampsiteShow extends React.Component {
           <div className="show-body-left">
             <p className="show-body-state">{campsite.state}</p>
             <h1>{campsite.title}</h1>
-            <p className="show-body-description">Description</p>
-            <p>{campsite.description}</p>
+
+
+            <div className="description-div">
+              <section>
+                <p className="show-body-description">Hosted by</p>
+                <p>{campsite.first_name}</p>
+              </section>
+
+              <div className="description-amenities">
+                <p>{campsite.description}</p>
+                <section className="amenities">
+                  <div className="amenities-left">
+                    <p><i class="fas fa-parking"></i> Parking</p>
+                    <p><i class="fas fa-tint"></i> Potable water</p>
+                    <p><i class="fas fa-shower"></i> Shower</p>
+                  </div>
+                  <div className="amenities-right">
+                    <p><i class="fas fa-female"></i> Group size up to 10</p>
+                    <p><i class="fas fa-child"></i> Kid friendly</p>
+                    <p><i class="fab fa-gripfire"></i> Fires allowed</p>
+                  </div>
+                </section>
+              </div>
+            </div>
+
+          <div className="description-div">
+            <section>
+              <p className="show-body-description">Details</p>
+            </section>
+            <div>
+              <section className="amenities">
+
+                <div className="amenities-left">
+                  <p><strong>Check in:</strong> After 2pm</p>
+                  <p><strong>Check out:</strong> Before 12pm</p>
+                  <p><strong>Cancelation policy:</strong> Moderate</p>
+                </div>
+
+                <div className="amenities-right">
+                  <p><strong>On arrival:</strong> Go straing to camp</p>
+                  <p><strong>Minimum nights:</strong> None</p>
+                  <p><strong>Accept bookings:</strong> 6 months out</p>
+                </div>
+
+              </section>
+            </div>
+          </div>
+
+          <div className="description-div">
+            <section>
+              <p className="show-body-description">Activities</p>
+            </section>
+            <div>
+              <section className="activities">
+
+                <div className="activities-left">
+                  <p><i class="fas fa-bicycle"></i> Biking</p>
+                  <p><i class="fas fa-swimmer"></i> Swimming</p>
+                  <p><i class="fas fa-fish"></i> Fishing</p>
+                </div>
+
+                <div className="activities-right">
+                  <p><i class="fab fa-wpexplorer"></i> Star gazing</p>
+                  <p><i class="fas fa-paw"></i> Pet friendly</p>
+                  <p><i class="fas fa-crow"></i> Wildlife watching</p>
+                </div>
+
+              </section>
+            </div>
+          </div>
+
           </div>
 
           <BookingFormContainer campsite={campsite} campsiteId={campsite.id}/>

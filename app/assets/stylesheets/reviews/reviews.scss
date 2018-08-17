@@ -4,6 +4,7 @@
   margin-left: auto;
   width: 900px;
   font-family: "Calibre", Helvetica, Arial, sans-serif;
+  color: #333333;
 }
 
 .review-icon {
@@ -46,6 +47,8 @@
   margin-left: auto;
   margin-right: auto;
   align-content: center;
+  color: #333333;
+
 }
 
 .review-form > form {
@@ -54,10 +57,11 @@
   margin-left: 50px;
 }
 
-.review-form > h1 {
+.review-form > h3 {
   padding-bottom: 20px;
   border-bottom: solid 1px #ebebeb;
   width: 500px;
+  font-size: 16px;
 }
 
 .review-form-hb-rating {
@@ -87,6 +91,7 @@
   color: #40d9ac;
   border: solid 1px #ebebeb;
   margin-top: 10px; 
+  border: solid 1px #40d9ac;
 }
 
 .review-submit:hover {
@@ -98,8 +103,10 @@
 .review-form-cancel {
   font-size: 16px;
   color: red;
+  border: solid 1px red;
   border: solid 1px #ebebeb;
   margin-top: 10px;
+
 }
 
 .review-form-cancel:hover {

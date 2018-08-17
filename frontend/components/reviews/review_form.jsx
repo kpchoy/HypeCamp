@@ -24,10 +24,9 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="review-form">
-        <h1>Write a Review</h1>
+        <h3>Post a Review</h3>
         <form onSubmit={this.handleSubmit}>
           <label className="review-form-hb-rating">HypeBeast Rating: </label>
         
