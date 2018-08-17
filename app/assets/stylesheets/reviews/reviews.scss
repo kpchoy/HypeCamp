@@ -47,3 +47,64 @@
   margin-right: auto;
   align-content: center;
 }
+
+.review-form > form {
+  margin-top: 20px;
+  width: 500px;
+  margin-left: 50px;
+}
+
+.review-form > h1 {
+  padding-bottom: 20px;
+  border-bottom: solid 1px #ebebeb;
+  width: 500px;
+}
+
+.review-form-hb-rating {
+  font-size: 22px;
+  color: #40d9ac;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.review-form-cancel {
+  margin-left: 50px;
+}
+
+.hype-rating {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.review-textarea {
+  margin-top: 20px;
+
+}
+
+.review-submit {
+  font-size: 16px;
+  color: #40d9ac;
+  border: solid 1px #ebebeb;
+  margin-top: 10px; 
+}
+
+.review-submit:hover {
+  cursor: pointer;
+  background: #40d9ac;
+  color: white
+}
+
+.review-form-cancel {
+  font-size: 16px;
+  color: red;
+  border: solid 1px #ebebeb;
+  margin-top: 10px;
+}
+
+.review-form-cancel:hover {
+  cursor: pointer;
+  color: white;
+  background: red;
+ 
+}

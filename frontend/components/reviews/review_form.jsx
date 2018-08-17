@@ -27,29 +27,35 @@ class ReviewForm extends React.Component {
     console.log(this.state);
     return (
       <div className="review-form">
+        <h1>Write a Review</h1>
         <form onSubmit={this.handleSubmit}>
-          <label>HypeBeast Rating</label>
-          <br/>
+          <label className="review-form-hb-rating">HypeBeast Rating: </label>
+        
           <input
+            className="hype-rating"
             type="number"
+            min="1"
+            max="5"
             value={this.state.rating}
             onChange={this.update("rating")}
           />
           <br/>
 
-          <label>Comment</label>
+          <label className="review-form-hb-rating">Review:</label>
           <br/>
 
           <textarea
-            cols="30"
+            className="review-textarea"
+            cols="60"
             rows="10"
+          
             value={this.state.body}
             onChange={this.update("body")}
           />
           <br/>
-          <input type="submit" />
+          <input className="review-submit" type="submit" />
         </form>
-        <button onClick={this.reRenderPage}>Cancel</button>
+        <button className="review-form-cancel" onClick={this.reRenderPage}>Cancel</button>
       </div>
     );
  }
