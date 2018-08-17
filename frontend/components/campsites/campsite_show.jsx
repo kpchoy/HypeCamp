@@ -41,14 +41,14 @@ class CampsiteShow extends React.Component {
                 <p>{campsite.description}</p>
                 <section className="amenities">
                   <div className="amenities-left">
-                    <p><i class="fas fa-parking"></i> Parking</p>
-                    <p><i class="fas fa-tint"></i> Potable water</p>
-                    <p><i class="fas fa-shower"></i> Shower</p>
+                    <p><i className="fas fa-parking"></i> Parking</p>
+                    <p><i className="fas fa-tint"></i> Potable water</p>
+                    <p><i className="fas fa-shower"></i> Shower</p>
                   </div>
                   <div className="amenities-right">
-                    <p><i class="fas fa-female"></i> Group size up to 10</p>
-                    <p><i class="fas fa-child"></i> Kid friendly</p>
-                    <p><i class="fab fa-gripfire"></i> Fires allowed</p>
+                    <p><i className="fas fa-female"></i> Group size up to 10</p>
+                    <p><i className="fas fa-child"></i> Kid friendly</p>
+                    <p><i className="fab fa-gripfire"></i> Fires allowed</p>
                   </div>
                 </section>
               </div>
@@ -85,15 +85,15 @@ class CampsiteShow extends React.Component {
               <section className="activities">
 
                 <div className="activities-left">
-                  <p><i class="fas fa-bicycle"></i> Biking</p>
-                  <p><i class="fas fa-swimmer"></i> Swimming</p>
-                  <p><i class="fas fa-fish"></i> Fishing</p>
+                  <p><i className="fas fa-bicycle"></i> Biking</p>
+                  <p><i className="fas fa-swimmer"></i> Swimming</p>
+                  <p><i className="fas fa-fish"></i> Fishing</p>
                 </div>
 
                 <div className="activities-right">
-                  <p><i class="fab fa-wpexplorer"></i> Star gazing</p>
-                  <p><i class="fas fa-paw"></i> Pet friendly</p>
-                  <p><i class="fas fa-crow"></i> Wildlife watching</p>
+                  <p><i className="fab fa-wpexplorer"></i> Star gazing</p>
+                  <p><i className="fas fa-paw"></i> Pet friendly</p>
+                  <p><i className="fas fa-crow"></i> Wildlife watching</p>
                 </div>
 
               </section>
