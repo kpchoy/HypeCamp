@@ -11,3 +11,12 @@ json.campsite_photos do
     end
   end
 end
+
+json.reviews do 
+  @campsite.reviews.each do |review|
+    json.set! review.id do 
+      json.extract! review, :id, :body, :campsite_id, :rating
+      json.extract! review.author, :first_name 
+    end 
+  end 
+end 

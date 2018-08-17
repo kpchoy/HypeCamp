@@ -6,7 +6,8 @@ import {fetchCampsite} from '../../actions/campsite_actions';
 const mstp = (state, ownProps) => {  
   return ({
     campsite: state.entities.campsites[ownProps.match.params.campsiteId],
-    campsitePhotos: Object.values(state.entities.campsitePhotos)
+    campsitePhotos: Object.values(state.entities.campsitePhotos),
+    reviews: Object.values(state.entities.reviews)
   });
 };
 

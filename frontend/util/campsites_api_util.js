@@ -20,3 +20,11 @@ export const createCampsite = (campsite) => (
     data: {campsite}
   })
 );
+
+export const createReview = (review) => (
+  $.ajax({
+    url: "/api/reviews",
+    type: "POST",
+    data: {review}
+  })
+);

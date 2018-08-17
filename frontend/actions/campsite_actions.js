@@ -21,3 +21,14 @@ const receiveCampsite = (payload) => ({
   type: RECEIVE_CAMPSITE,
   payload
 });
+
+export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
+
+export const createReview = (review) => dispatch => (
+  CampsiteAPIUtil.createReview(review).then((review) => dispatch(receiveReview(review)))
+);
+
+const receiveReview = (review) => ({
+  type: RECEIVE_REVIEW,
+  review
+});

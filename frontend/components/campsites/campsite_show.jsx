@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'react-router';
 import BookingFormContainer from '../booking/booking_form_container';
+import CampsiteReviewsIndex from '../reviews/reviews_campsite_index';
 
 class CampsiteShow extends React.Component {
   componentDidMount() {
@@ -8,7 +9,7 @@ class CampsiteShow extends React.Component {
   }  
 
   render() {
-    const { campsite, campsitePhotos } = this.props;
+    const { campsite, campsitePhotos, reviews } = this.props;
 
     if (!campsite) {
     return (<div>Loading...</div>);
@@ -32,11 +33,12 @@ class CampsiteShow extends React.Component {
             <p>{campsite.description}</p>
           </div>
 
-
-          
           <BookingFormContainer campsite={campsite} campsiteId={campsite.id}/>
         </section>
 
+        <div>
+          <CampsiteReviewsIndex reviews={reviews}/>
+        </div>
       </div>
     );
 

@@ -179,3 +179,15 @@ check_in: Date.new(2017,12,3), check_out: Date.new(2017,12,24))
 b5u2 = Booking.create!(campsite_id: c5.id, guest_id: u2.id, guests: 3, 
 check_in: Date.new(2018,1,3), check_out: Date.new(2018,1,17))
 
+Review.delete_all
+r1c1u2 = Review.create!(body: "We had such a great time, would recommend!",
+author_id: u2.id, campsite_id: c1.id, rating: 5)
+
+r1c1u1 = Review.create!(body: "We had such a great time, would recommend!",
+author_id: u1.id, campsite_id: c1.id, rating: 5)
+
+r1c2u2 = Review.create!(body: "So many great things to do at this location!",
+author_id: u2.id, campsite_id: c2.id, rating: 5)
+
+r1c3u2 = Review.create!(body: "A great break from the city life!",
+author_id: u2.id, campsite_id: c3.id, rating: 5)

@@ -7,5 +7,7 @@ class Campsite < ApplicationRecord
 
   has_many :campsite_photos
 
-  has_many :bookings    
+  has_many :bookings
+  
+  has_many :reviews 
 end
