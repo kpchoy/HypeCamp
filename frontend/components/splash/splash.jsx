@@ -23,7 +23,7 @@ class Splash extends React.Component {
 
   render() {
     return (
-      <div >
+      <div className="main-splash">
         
         <section className="uppersplash">
           <div className="uppersplash-l">
