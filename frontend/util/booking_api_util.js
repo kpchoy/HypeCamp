@@ -16,7 +16,13 @@ export const createBooking = (booking) => (
   $.ajax({
     url: '/api/bookings',
     type: "POST",
-    data: {booking}
+    data: {booking: {
+      campsite_id: booking.campsiteId,
+      guest_id: booking.guestId,
+      guests: booking.guests,
+      check_in: booking.checkIn,
+      check_out: booking.checkOut,
+    }}
   })
 );
 

@@ -7,7 +7,8 @@ class BookingForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = props.booking;
-    this.handleNumGuest.bind(this);
+    this.handleNumGuest = this.handleNumGuest.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(property) {
@@ -26,14 +27,20 @@ class BookingForm extends React.Component {
     };
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.createBooking(this.state);
+
+  }
+
 
   render () {
     console.log(this.state);
+    console.log(this.props);
     const {checkIn, checkOut, guests} = this.state;
 
     return (
       <div className="show-body-right">
-        <form>
           <div className="show-body-price">
             <h1>$ {this.props.campsite.daily_rate}</h1>
             <p>per night</p>
@@ -68,9 +75,8 @@ class BookingForm extends React.Component {
             </li>
           </ul>
           <section>
-            <a href="">Request to Book</a>
+            <button onClick={this.handleSubmit}>Request to Book</button>
           </section>
-        </form>
       </div>     
     );
   }

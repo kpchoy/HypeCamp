@@ -13,7 +13,7 @@ const receiveBooking = (booking) => ({
 });
 
 export const createBooking = (booking) => dispatch => (
-  APIUtil.fetchBooking(booking).then((booking) => dispatch(receiveBooking(booking)))
+  APIUtil.createBooking(booking).then((booking) => dispatch(receiveBooking(booking)))
 );
 
 export const deleteBooking = (bookingId) => dispatch => (
