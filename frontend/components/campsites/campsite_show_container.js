@@ -4,10 +4,12 @@ import {fetchCampsite} from '../../actions/campsite_actions';
 
 
 const mstp = (state, ownProps) => {  
+   
   return ({
     campsite: state.entities.campsites[ownProps.match.params.campsiteId],
     campsitePhotos: Object.values(state.entities.campsitePhotos),
-    reviews: Object.values(state.entities.reviews)
+    reviews: Object.values(state.entities.reviews),
+    guestId: state.session.id 
   });
 };
 

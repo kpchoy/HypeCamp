@@ -9,8 +9,10 @@ class CampsiteShow extends React.Component {
     this.props.fetchCampsite(this.props.match.params.campsiteId);
   }  
 
+
+
   render() {
-    const { campsite, campsitePhotos, reviews } = this.props;
+    const { campsite, campsitePhotos, reviews, guestId } = this.props;
 
     if (!campsite) {
     return (<div>Loading...</div>);
@@ -102,7 +104,7 @@ class CampsiteShow extends React.Component {
 
           </div>
 
-          <BookingFormContainer campsite={campsite} campsiteId={campsite.id}/>
+          <BookingFormContainer campsite={campsite} campsiteId={campsite.id}  guestId={guestId} />
         </section>
 
         <div>

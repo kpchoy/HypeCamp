@@ -7,7 +7,7 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
   
   update(field) {
@@ -20,6 +20,12 @@ class Greeting extends React.Component {
     e.preventDefault();
      
     this.props.history.push('/search');
+  }
+
+  handleDemoLogin(e) {
+    
+    e.preventDefault();
+    this.props.login({email: "Jim@gmail.com", password: "123456"});
   }
 
   render () {
@@ -50,12 +56,12 @@ class Greeting extends React.Component {
         <a className="right-greeting-icons" href="http://www.linkedin.com/in/kevin-choy-b5714b133" target="_blank"><i className="fab fa-linkedin"></i></a>
         <a className="right-greeting-icons" href="https://github.com/kpchoy/HypeCamp" target="_blank"><i className="fab fa-github-square"></i></a>
         <Link className="right-greeting-links" to="/search">Scout</Link>
-        <a className="right-greeting-links" href="">About</a>
+        <Link className="right-greeting-links" to="/about">About</Link>
         <nav className="login-signup">
           <button className="signup-login-button" onClick={() => openModal('signup')}>Sign up</button>
           <button className="signup-login-button" onClick={() => openModal('login')}>Log in</button>
         </nav>
-        <button className="demo-button" onClick={() => login({email: "Jim@gmail.com", password: "123456"})}>Demo Login</button>
+        <button className="demo-button" onClick={this.handleDemoLogin}>Demo Login</button>
       </section>
 
     </div>
@@ -104,7 +110,7 @@ class Greeting extends React.Component {
     
     return currentUser ? personalGreeting(currentUser, logout) : sessionLinks();
   }
-};
+}
 
 
 export default withRouter(Greeting);

@@ -4,6 +4,7 @@ import BookingForm from './booking_form';
 
 
 const mstp = (state, ownProps) => {
+  
   const booking = { campsiteId: ownProps.campsiteId, guestId: state.session.id, guests: 1, checkIn: '', checkOut: '' };
   return ({ 
     booking,

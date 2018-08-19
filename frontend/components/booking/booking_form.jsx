@@ -12,6 +12,13 @@ class BookingForm extends React.Component {
     this.reRenderPage = this.reRenderPage.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.guestId) {
+      this.setState({guestId: nextProps.guestId});
+    }
+  }
+  
+
   update(property) {
     return e => this.setState({
       [property]: e.target.value
@@ -44,7 +51,7 @@ class BookingForm extends React.Component {
   render () {
     
     const {checkIn, checkOut, guests} = this.state;
-
+   
     return (
       <div className="show-body-right">
         <div className="show-price-guest-num">
