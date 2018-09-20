@@ -15,8 +15,14 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-   
-    this.props.createReview(this.state).then(this.reRenderPage());
+    
+    if (this.props.review.author_id === null) {
+      // console.log("hello");
+      this.props.openModal('login');
+      this.props.history.push('/');
+    } else {
+      this.props.createReview(this.state).then(this.reRenderPage());
+    }
   }
 
   update(property) {
@@ -26,7 +32,7 @@ class ReviewForm extends React.Component {
   render() {
     return (
       <div className="review-form">
-        <h3>Post a Review</h3>
+        <h2>Post a Review:</h2>
         <form onSubmit={this.handleSubmit}>
           <label className="review-form-hb-rating">HypeBeast Rating: </label>
         
@@ -38,9 +44,6 @@ class ReviewForm extends React.Component {
             value={this.state.rating}
             onChange={this.update("rating")}
           />
-          <br/>
-
-          <label className="review-form-hb-rating">Review:</label>
           <br/>
 
           <textarea

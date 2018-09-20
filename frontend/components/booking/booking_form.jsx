@@ -17,7 +17,6 @@ class BookingForm extends React.Component {
       this.setState({guestId: nextProps.guestId});
     }
   }
-  
 
   update(property) {
     return e => this.setState({

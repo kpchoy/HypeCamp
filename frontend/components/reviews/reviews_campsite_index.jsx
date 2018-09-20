@@ -1,6 +1,7 @@
 import React from 'react';
 
 class ReviewsCampsiteIndex extends React.Component {
+
   render () {
      
     return (
