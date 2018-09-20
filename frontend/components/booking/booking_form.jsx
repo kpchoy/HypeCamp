@@ -37,10 +37,16 @@ class BookingForm extends React.Component {
   
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createBooking(this.state)
-      .then(() => this.reRenderPage())
-      .then(() => this.props.history.push('/profile'));
-    
+     
+    if (this.props.guestId === null) {
+      // console.log("hello");
+      this.props.openModal('login');
+      this.props.history.push('/');
+    } else {
+      this.props.createBooking(this.state)
+        .then(() => this.reRenderPage())
+        .then(() => this.props.history.push('/profile'));
+    }
   }
   
   reRenderPage() {
