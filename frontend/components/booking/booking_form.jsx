@@ -41,7 +41,7 @@ class BookingForm extends React.Component {
     if (this.props.guestId === null) {
       // console.log("hello");
       this.props.openModal('login');
-      this.props.history.push('/');
+      // this.props.history.push('/');
     } else {
       this.props.createBooking(this.state)
         .then(() => this.reRenderPage())
