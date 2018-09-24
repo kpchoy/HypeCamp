@@ -106,7 +106,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="sf-main">
           
           <br/>
-          <div onClick={this.props.closeModal} className="close-x"></div>
+          <div onClick={this.props.closeModal} className="close-x">x</div>
           {this.renderWelcomeBack()}
           {this.renderFnameLname()}
           <div className="login-form">

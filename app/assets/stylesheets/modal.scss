@@ -18,3 +18,15 @@
   transform: translate(-50%, -50%);
 }
 
+.close-x {
+  border: solid 1px;
+  width: 20px; 
+  text-align: center;
+  margin-left: 85%; 
+}
+
+.close-x:hover {
+  cursor: pointer;
+  background: grey;
+  color: white; 
+}
