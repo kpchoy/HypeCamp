@@ -21,6 +21,8 @@ class ReviewForm extends React.Component {
       this.props.openModal('login');
       this.props.history.push('/');
     } else {
+
+
       this.props.createReview(this.state).then(this.reRenderPage());
     }
   }
