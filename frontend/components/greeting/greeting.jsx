@@ -38,18 +38,18 @@ class Greeting extends React.Component {
         <Link to="/" className="link-hype-logo" >
           <h1 className="hype-logo">HYPECAMP</h1>
         </Link>
-        <div className="main-searchbar">
-          <div className="search-icon" >
-            <i className="fa fa-search" aria-hidden="true"></i>
+          
+        <button className="main-searchbar" onSubmit={this.handleSubmit}>
+          <div className="search-bar-items">
+            <div className="search-icon" >
+              <i className="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <p className="search-bar">
+              Search Campsites
+            </p>
           </div>
-          <form onSubmit={this.handleSubmit}>
-            <input type="text"
-            placeholder="Search..."
-            className="search-bar"
-            onSubmit={this.handleSubmit}
-            />
-          </form>
-        </div>
+        </button>
+          
       </section>
 
       <section className="right-greeting">
