@@ -57,15 +57,15 @@ class CampsiteMap extends React.Component {
     google.maps.event.addListener(this.map, 'idle', () => {
       const bounds = this.map.getBounds();
 
-      console.log('center',
-        bounds.getCenter().lat(), 
-        bounds.getCenter().lng());
-      console.log("north east",
-        bounds.getNorthEast().lat(), 
-        bounds.getNorthEast().lng());
-      console.log("south west",
-        bounds.getSouthWest().lat(), 
-        bounds.getSouthWest().lng());
+      // console.log('center',
+      //   bounds.getCenter().lat(), 
+      //   bounds.getCenter().lng());
+      // console.log("north east",
+      //   bounds.getNorthEast().lat(), 
+      //   bounds.getNorthEast().lng());
+      // console.log("south west",
+      //   bounds.getSouthWest().lat(), 
+      //   bounds.getSouthWest().lng());
     });
   }
 

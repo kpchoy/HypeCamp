@@ -9,7 +9,7 @@ class BookingIndex extends React.Component {
   }
 
   render () {
-    console.log(this.props)
+    // console.log(this.props)
     return (
       <div className="trips-main">
         <div className="trips-left">
